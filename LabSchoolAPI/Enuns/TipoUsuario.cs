@@ -7,9 +7,9 @@ namespace LabSchoolAPI.Enuns
 {
     public enum TipoUsuario
     {
-        Administrador,
-        Pedagogo,
-        Professor,
-        Aluno
+        Administrador = 0,
+        Pedagogo = 1,
+        Professor = 2,
+        Aluno = 3
     }
 }

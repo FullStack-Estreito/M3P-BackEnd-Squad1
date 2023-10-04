@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace LabSchoolAPI.Enuns
 {
-    public enum TipoUsuario
+    public enum TipoGenero
     {
-        Administrador,
-        Pedagogo,
-        Professor,
-        Aluno
+        Masculino = 0,
+        Feminino = 1,
+        NãoBinário = 2,
+        Outro = 3
     }
-
 }
