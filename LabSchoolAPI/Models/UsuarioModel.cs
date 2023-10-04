@@ -30,7 +30,7 @@ namespace LabSchoolAPI.Models
         public string Email { get; set; }
 
         [Required]
-        public Genero Genero { get; set; } //enum
+        public TipoGenero Genero { get; set; } //enum
 
         [Required]
         public byte[] PasswordHash { get; set; } // para autenticar login com token jwt
