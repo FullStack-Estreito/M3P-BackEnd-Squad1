@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "rUD8IJtDYiwP6LTUX7z4R0LHfWXpGwc59XvT3o88/vaWGuBwW09Us8qJZfRO26wIeIu3w68GjKqS99HAT6mKrA==",
+  "success": true,
+  "projectFilePath": "/home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabScoolAPI/LabScoolAPI.csproj",
+  "expectedPackageFiles": [
+    "/home/feredragon/.nuget/packages/microsoft.aspnetcore.openapi/7.0.5/microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
+    "/home/feredragon/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/home/feredragon/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/home/feredragon/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/home/feredragon/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/home/feredragon/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/home/feredragon/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
