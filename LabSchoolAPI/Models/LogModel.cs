@@ -15,6 +15,8 @@ namespace LabSchoolAPI.Models
         [Required]
         [ForeignKey("UsuarioID")] 
         public int UsuarioID { get; set; }
+
+        [Required]
         public DateTime DataHoraAtividade { get; set; }
 
         [Required]
@@ -24,7 +26,7 @@ namespace LabSchoolAPI.Models
         [StringLength(250)] 
         public string DescricaoDetalhada { get; set; }
 
-        public virtual ICollection Usuarios { get; set; }
+        public virtual ICollection<UsuarioModel> Usuarios { get; set; }
     }
 
 }
