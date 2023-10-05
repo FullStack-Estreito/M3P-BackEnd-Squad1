@@ -16,7 +16,7 @@ namespace LabSchoolAPI.Models
         public DateTime DataHoraRealizacao { get; set; }
 
         [Required]
-        public decimal NotaOuPontuacao { get; set; }
+        public float NotaOuPontuacao { get; set; } // Tipo alterado para float
 
         [Required]
         public bool Status { get; set; } // True para concluído, False para não concluído
@@ -25,17 +25,15 @@ namespace LabSchoolAPI.Models
         public string Observacoes { get; set; }
 
         [Required]
+        [ForeignKey("Aluno")] 
         public int UsuarioAlunoId { get; set; }
 
         [Required]
+        [ForeignKey("Exercicio")] 
         public int ExercicioId { get; set; }
 
-        [ForeignKey("UsuarioAlunoId")]
         public virtual UsuarioModel Aluno { get; set; }  // Propriedade de navegação para a tabela de alunos.
 
-        [ForeignKey("ExercicioId")]
         public virtual ExercicioModel Exercicio { get; set; }  // Propriedade de navegação para a tabela de exercícios.
-        
-
     }
 }
