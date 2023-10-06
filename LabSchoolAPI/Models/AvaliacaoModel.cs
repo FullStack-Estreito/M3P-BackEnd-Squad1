@@ -29,7 +29,16 @@ namespace LabSchoolAPI.Models
 
         [ForeignKey("Professor")] 
         public int ProfessorID { get; set; }
+
+        [Required]
         public bool Status { get; set; }
+
+        [Required]
+        public double PontuacaoMaxima {get; set;}
+
+        [Required] 
+        [RegularExpression(@"^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}$", ErrorMessage = "A data_conclusao deve estar no formato DD/MM/AAAA.")]
+        public string DataRealizacao {get; set;}
 
     }
 
