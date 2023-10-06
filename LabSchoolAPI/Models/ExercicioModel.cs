@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations.Schema;
 using System;
 namespace LabSchoolAPI.Models
 {
@@ -30,7 +31,13 @@ namespace LabSchoolAPI.Models
         [Required]
         [StringLength(200)]
         public string Observação { get; set; }
+
+        [ForeignKey("UsuarioModel")]
+        public int AlunoID { get; set; }
         
+        [ForeignKey("UsuarioModel")]
+        public int ProfessorID { get; set; }
+
         public virtual UsuarioModel Aluno { get; set; }
 
         public virtual UsuarioModel Professor { get; set; }
