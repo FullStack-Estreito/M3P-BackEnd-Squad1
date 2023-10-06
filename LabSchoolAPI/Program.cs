@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // string de conexão
 string connectionString = "Server=127.0.0.1,1433;Database=LabScoolApi;User Id=sa;Password=P@ssw0rd123!;TrustServerCertificate=True;";
-builder.Services.AddDbContext<LabSchoolApiDbContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<DbContext>(options => options.UseSqlServer(connectionString));
 
 //  autenticação JWT
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
