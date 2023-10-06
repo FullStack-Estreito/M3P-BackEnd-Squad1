@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using LabSchoolAPI.Enuns;
+using LabSchoolAPI.Enums;
 
 namespace LabSchoolAPI.Models
 {
@@ -39,6 +39,6 @@ namespace LabSchoolAPI.Models
         public string Bairro { get; set; }
 
         [StringLength(255)] // Campo opcional
-        public string PontoReferencia { get; set; }
+        public string Referencia { get; set; }
     }
 }

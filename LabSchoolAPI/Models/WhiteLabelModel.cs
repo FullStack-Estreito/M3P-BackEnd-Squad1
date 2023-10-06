@@ -18,18 +18,17 @@ namespace LabSchoolAPI.Models
         public string Slogan { get; set; }
 
         [StringLength(255)] // opcional
-        public string PalhetaDeCores { get; set; }
+        public string Cores { get; set; }
 
-        [Required]
-        [StringLength(200)] // URL da imagem do logotipo
-        public string UrlLogotipo { get; set; }
+        
+        [StringLength(200)] // URL da imagem do logotipo, opcional
+        public string UrlLogo { get; set; }
 
         [StringLength(512)] // opcional
-        public string OutrasInformacoes { get; set; }
+        public string Complemento { get; set; }
 
-        [Required]
-        public int UsuarioAdministradorId { get; set; } //chave estrangeira 
 
-        public virtual UsuarioModel UsuarioAdministrador { get; set; }  // Propriedade de navegação para a tabela Usuarios
+         // Relacionamento abaixo //
+        public virtual ICollection<UsuarioModel> Usuarios { get; set; }  // Propriedade de navegação para a tabela Usuarios
     }
 }
