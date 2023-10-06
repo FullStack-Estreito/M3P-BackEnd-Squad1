@@ -1,5 +1,8 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System;
+
+
 namespace LabSchoolAPI.Models
 {
     public class ExercicioModel 
