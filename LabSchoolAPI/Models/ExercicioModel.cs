@@ -9,37 +9,28 @@ namespace LabSchoolAPI.Models
 
         [Required]
         [StringLength(50)]
-        public string Matéria { get; set; }
+        public string Materia { get; set; }
 
         [Required]
         [StringLength(100)]
-        public string Título { get; set; }
+        public string Titulo { get; set; }
 
         [Required]
         [StringLength(200)]
-        public string Descrição { get; set; }
+        public string Descricao { get; set; }
 
         [Required]
-        public bool StatusAtividade { get; set; }
+        public DateTime DataConclusao { get; set; }
 
-        [Required]
-        public bool StatusConclusão { get; set; }
 
-        [Required]
-        public DateTime DataConclusão { get; set; }
+        // Chaves e relacionamentos abaixo
 
-        [Required]
-        [StringLength(200)]
-        public string Observação { get; set; }
-
-        [ForeignKey("UsuarioModel")]
         public int AlunoID { get; set; }
-        
-        [ForeignKey("UsuarioModel")]
-        public int ProfessorID { get; set; }
 
         public virtual UsuarioModel Aluno { get; set; }
-
+        
+        public int ProfessorID { get; set; }
+        
         public virtual UsuarioModel Professor { get; set; }
     }
 }

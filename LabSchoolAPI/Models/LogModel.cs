@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using LabSchoolAPI.Enuns;
+using LabSchoolAPI.Enums;
 
 namespace LabSchoolAPI.Models
 {
@@ -13,10 +13,6 @@ namespace LabSchoolAPI.Models
         public int ID { get; set; }
 
         [Required]
-        [ForeignKey("UsuarioID")] 
-        public int UsuarioID { get; set; }
-
-        [Required]
         public DateTime DataHoraAtividade { get; set; }
 
         [Required]
@@ -24,9 +20,13 @@ namespace LabSchoolAPI.Models
 
         [Required]
         [StringLength(250)] 
-        public string DescricaoDetalhada { get; set; }
+        public string Descricao { get; set; }
 
-        public virtual ICollection<UsuarioModel> Usuarios { get; set; }
+
+        // Chaves e relacionamentos abaixo //
+        public int UsuarioID { get; set; }
+
+        public virtual UsuarioModel Usuario { get; set; }
     }
 
 }
