@@ -19,7 +19,7 @@ namespace LabSchoolAPI.Models
         public string Slogan { get; set; }
 
         // opcional
-        public string[] Cores { get; set; }
+        public List<string> Cores { get; set; }
 
         
         [StringLength(200)] // URL da imagem do logotipo, opcional
