@@ -22,56 +22,66 @@ namespace LabSchoolAPI.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             // Configurações para o modelo Usuario
             modelBuilder.Entity<UsuarioModel>()
                 .HasOne(u => u.Endereco)
                 .WithMany()
-                .HasForeignKey(u => u.EnderecoId);
+                .HasForeignKey(u => u.EnderecoId)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
             modelBuilder.Entity<UsuarioModel>()
                 .HasOne(u => u.WhiteLabel)
                 .WithMany(wl => wl.Usuarios)
-                .HasForeignKey(u => u.WhiteLabelId);
+                .HasForeignKey(u => u.WhiteLabelId)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
             // Configurações para o modelo Atendimento
             modelBuilder.Entity<AtendimentoModel>()
                 .HasOne(a => a.Aluno)
                 .WithMany()
-                .HasForeignKey(a => a.AlunoID);
+                .HasForeignKey(a => a.AlunoID)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
             modelBuilder.Entity<AtendimentoModel>()
                 .HasOne(a => a.Pedagogo)
                 .WithMany()
-                .HasForeignKey(a => a.PedagogoID);
+                .HasForeignKey(a => a.PedagogoID)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
             // Configurações para o modelo Avaliacao
             modelBuilder.Entity<AvaliacaoModel>()
                 .HasOne(av => av.Aluno)
                 .WithMany()
-                .HasForeignKey(av => av.AlunoID);
+                .HasForeignKey(av => av.AlunoID)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
             modelBuilder.Entity<AvaliacaoModel>()
                 .HasOne(av => av.Professor)
                 .WithMany()
-                .HasForeignKey(av => av.ProfessorID);
+                .HasForeignKey(av => av.ProfessorID)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
             // Configurações para o modelo Exercicio
             modelBuilder.Entity<ExercicioModel>()
                 .HasOne(ex => ex.Aluno)
                 .WithMany()
-                .HasForeignKey(ex => ex.AlunoID);
+                .HasForeignKey(ex => ex.AlunoID)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
-            modelBuilder.Entity<ExercicioModel>()
+                    modelBuilder.Entity<ExercicioModel>()
                 .HasOne(ex => ex.Professor)
                 .WithMany()
-                .HasForeignKey(ex => ex.ProfessorID);
+                .HasForeignKey(ex => ex.ProfessorID)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
 
             // Configurações para o modelo Log
             modelBuilder.Entity<LogModel>()
                 .HasOne(l => l.Usuario)
                 .WithMany()
-                .HasForeignKey(l => l.UsuarioID);
-        }
+                .HasForeignKey(l => l.UsuarioID)
+                .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
+        }
+
+
     }
 }
