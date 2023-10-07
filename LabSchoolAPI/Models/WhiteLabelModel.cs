@@ -9,7 +9,7 @@ namespace LabSchoolAPI.Models
     {
         [Key]
         public int Id { get; set; }
-        public List<string> Cores { get; set; }
+        public string Cores { get; set; }
 
         [Required]
         [StringLength(100)]
