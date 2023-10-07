@@ -80,7 +80,7 @@ namespace LabSchoolAPI.Context
                 .WithMany()
                 .HasForeignKey(l => l.UsuarioID)
                 .OnDelete(DeleteBehavior.Restrict);  // Aplicando a restrição
-        }
+        }
 
 
     }
