@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wwCLNirt3jhnSPnzHYBx/wnBEOodHaAxpRt8Z25EsEnJRmlmK/quFjHbMwap4KMD1EeFdJsorSZRhq345Eygrg==",
+  "dgSpecHash": "GmYs1Iwkm/W2D85sDf5/D6bAJvFgCecsdny//I9gnX4GhjWj5UjfptoFI0nclDPkM+a/Cu3KNF1G40GjMiQvEg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\Módulo_3_Proj_Final\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
+  "projectFilePath": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\LabSchoolAPI\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rogem\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\rogem\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

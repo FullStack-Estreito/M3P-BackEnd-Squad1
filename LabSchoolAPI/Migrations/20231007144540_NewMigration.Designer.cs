@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LabSchoolAPI.Migrations
 {
     [DbContext(typeof(LabSchoolContext))]
-    [Migration("20231007010744_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20231007144540_NewMigration")]
+    partial class NewMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
