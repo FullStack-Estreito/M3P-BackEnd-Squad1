@@ -8,7 +8,8 @@ namespace LabSchoolAPI.Models
     public class WhiteLabelModel
     {
         [Key]
-        public int ID { get; set; }
+        public int Id { get; set; }
+        public List<string> Cores { get; set; }
 
         [Required]
         [StringLength(100)]
@@ -17,10 +18,6 @@ namespace LabSchoolAPI.Models
         [Required]
         [StringLength(200)]
         public string Slogan { get; set; }
-
-        // opcional
-        public List<string> Cores { get; set; }
-
         
         [StringLength(200)] // URL da imagem do logotipo, opcional
         public string UrlLogo { get; set; }
