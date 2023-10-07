@@ -24,7 +24,7 @@ namespace LabSchoolAPI.DTOs.Usuario
 
         public TipoUsuario Tipo { get; set; }
 
-        public EnderecoReadDTO Endereco { get; set; } 
+        //public EnderecoReadDTO Endereco { get; set; } 
 
         public bool StatusAtivo { get; set; }
 
