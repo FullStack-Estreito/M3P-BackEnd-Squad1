@@ -3431,24 +3431,31 @@
     ]
   },
   "packageFolders": {
-    "/Users/alexandrenolla/.nuget/packages/": {}
+    "C:\\Users\\rogem\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/LabScoolAPI.csproj",
-      "projectName": "LabScoolAPI",
-      "projectPath": "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/LabScoolAPI.csproj",
-      "packagesPath": "/Users/alexandrenolla/.nuget/packages/",
-      "outputPath": "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/",
+      "projectUniqueName": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\Módulo_3_Proj_Final\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
+      "projectName": "LabSchoolAPI",
+      "projectPath": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\Módulo_3_Proj_Final\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
+      "packagesPath": "C:\\Users\\rogem\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\Módulo_3_Proj_Final\\M3P-BackEnd-Squad1\\LabSchoolAPI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/alexandrenolla/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\rogem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3527,7 +3534,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
