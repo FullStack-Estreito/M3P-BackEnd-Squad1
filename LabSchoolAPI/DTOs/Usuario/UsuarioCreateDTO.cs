@@ -32,9 +32,9 @@ namespace LabSchoolAPI.DTOs
         [StringLength(100)]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        public string Senha { get; set; }
+        // [Required]
+        // [StringLength(100)]
+        // public string Senha { get; set; }
 
         [Required]
         public TipoUsuario Tipo { get; set; }
@@ -43,7 +43,6 @@ namespace LabSchoolAPI.DTOs
 
         public int? ProfessorId { get; set; }
 
-        [Required]
-        public int WhiteLabelId { get; set; }
+        public int? WhiteLabelId { get; set; }
     }
  }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LabSchoolAPI.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace LabSchoolAPI.DTOs.Usuario
 {
@@ -23,7 +24,7 @@ namespace LabSchoolAPI.DTOs.Usuario
 
         public TipoUsuario Tipo { get; set; }
 
-        public EnderecoModel Endereco { get; set; } 
+        public EnderecoReadDTO Endereco { get; set; } 
 
         public bool StatusAtivo { get; set; }
 
