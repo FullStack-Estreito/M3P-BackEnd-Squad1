@@ -11,7 +11,7 @@ namespace LabSchoolAPI.Models
     {
 
     [Key]
-    public int ID { get; set; }// ID (Chave Primária)
+    public int Id { get; set; }// ID (Chave Primária)
 
     [Required]
     [StringLength(500)] 

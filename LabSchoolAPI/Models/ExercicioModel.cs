@@ -8,7 +8,7 @@ namespace LabSchoolAPI.Models
     public class ExercicioModel 
     {
         [Key]
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [StringLength(50)]
