@@ -1,13 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LabSchoolAPI.DTOs.WhiteLabel
 {
     public class WhiteLabelUpdateDTO
-    {
-         public int? WhiteLabelId { get; set; }
+    {   
+        [Required]
+        public int WhiteLabelId { get; set; }
+        
         public string NomeEmpresa { get; set; }
 
         public string Slogan { get; set; }
