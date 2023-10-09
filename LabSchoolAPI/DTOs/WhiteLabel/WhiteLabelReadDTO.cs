@@ -7,7 +7,7 @@ namespace LabSchoolAPI.DTOs.WhiteLabel
 {
     public class WhiteLabelReadDTO
     {
-        public int? WhiteLabelId { get; set; }
+        public int WhiteLabelId { get; set; }
         public string NomeEmpresa { get; set; }
 
         public string Slogan { get; set; }

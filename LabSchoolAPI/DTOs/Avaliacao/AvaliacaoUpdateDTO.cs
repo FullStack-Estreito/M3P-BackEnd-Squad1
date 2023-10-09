@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace LabSchoolAPI.DTOs
 {
     public class AvaliacaoUpdateDTO
@@ -14,6 +16,7 @@ namespace LabSchoolAPI.DTOs
 
         public DateTime DataRealizacao { get; set; }
 
+        [Required]
         public int AvaliacaoId { get; set; }
         
         public int ProfessorId { get; set; }

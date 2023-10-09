@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using LabSchoolAPI.Enums;
@@ -7,7 +8,8 @@ using LabSchoolAPI.Enums;
 namespace LabSchoolAPI.DTOs.Endereco
 {
     public class EnderecoUpdateDTO
-    {
+    {   
+        [Required]
         public int EnderecoId { get; set; }
 
         public string Cep { get; set; }

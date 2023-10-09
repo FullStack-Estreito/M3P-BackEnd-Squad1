@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace LabSchoolAPI.DTOs
 {
     public class AtendimentoUpdateDTO
@@ -12,6 +14,7 @@ namespace LabSchoolAPI.DTOs
 
         public int PedagogoId { get; set; }
 
+        [Required]
         public int AtendimentoId { get; set; }
     }
 }
