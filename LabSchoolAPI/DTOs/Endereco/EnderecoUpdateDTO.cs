@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LabSchoolAPI.Enums;
 
 namespace LabSchoolAPI.DTOs.Endereco
 {
@@ -9,8 +10,6 @@ namespace LabSchoolAPI.DTOs.Endereco
     {
         public int EnderecoId { get; set; }
 
-        //public EnderecoReadDTO Endereco { get; set; } 
-        
         public string Cep { get; set; }
 
         public string Cidade { get; set; }

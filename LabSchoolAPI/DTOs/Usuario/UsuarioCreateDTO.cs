@@ -39,10 +39,10 @@ namespace LabSchoolAPI.DTOs
         [Required]
         public TipoUsuario Tipo { get; set; }
 
-        public double? Matricula { get; set; }
+        public double Matricula { get; set; }
 
-        public int? ProfessorId { get; set; }
+        public int ProfessorId { get; set; }
 
-        public int? WhiteLabelId { get; set; }
+        public int WhiteLabelId { get; set; }
     }
  }

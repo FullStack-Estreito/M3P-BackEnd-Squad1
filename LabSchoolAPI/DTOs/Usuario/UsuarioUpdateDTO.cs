@@ -15,7 +15,7 @@ namespace LabSchoolAPI.DTOs.Usuario
         [StringLength(200)]
         public string Nome { get; set; }
 
-        public TipoGenero? Genero { get; set; }
+        public TipoGenero Genero { get; set; }
 
         [StringLength(11)]
         public string Cpf { get; set; }
@@ -27,12 +27,12 @@ namespace LabSchoolAPI.DTOs.Usuario
         [StringLength(100)]
         public string Email { get; set; }
 
-        public TipoUsuario? Tipo { get; set; }
+        public TipoUsuario Tipo { get; set; }
 
-        public double? Matricula { get; set; }
+        public double Matricula { get; set; }
 
-        public int? ProfessorId { get; set; }
+        public int ProfessorId { get; set; }
 
-        public int? WhiteLabelId { get; set; }
+        public int WhiteLabelId { get; set; }
     }
 }

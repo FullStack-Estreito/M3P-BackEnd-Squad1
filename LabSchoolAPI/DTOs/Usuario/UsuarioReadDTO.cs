@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LabSchoolAPI.Enums;
 using System.ComponentModel.DataAnnotations;
+using LabSchoolAPI.DTOs.Endereco;
 
 namespace LabSchoolAPI.DTOs.Usuario
 {
@@ -24,13 +25,13 @@ namespace LabSchoolAPI.DTOs.Usuario
 
         public TipoUsuario Tipo { get; set; }
 
-        //public EnderecoReadDTO Endereco { get; set; } 
+        public EnderecoReadDTO Endereco { get; set; } 
 
         public bool StatusAtivo { get; set; }
 
-        public double? Matricula { get; set; }
+        public double Matricula { get; set; }
 
-        public int? ProfessorId { get; set; }
+        public int ProfessorId { get; set; }
 
         public int WhiteLabelId { get; set; }
     }
