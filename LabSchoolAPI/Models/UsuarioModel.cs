@@ -24,7 +24,7 @@ namespace LabSchoolAPI.Models
         [Column(TypeName = "VARCHAR"), Required, StringLength(15)]  // telefone no formato (XX) XXXXX-XXXX
         public string Telefone { get; set; }
 
-        [Required, EmailAddress, StringLength(100)]
+        [Column(TypeName = "VARCHAR"), Required, EmailAddress, StringLength(100)]
         public string Email { get; set; }
 
         [Required]
