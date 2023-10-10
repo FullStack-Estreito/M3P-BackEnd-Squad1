@@ -18,7 +18,5 @@ namespace LabSchoolAPI.DTOs
 
         public int AlunoId { get; set; }
 
-        public bool StatusAtivo { get; set; }
-
     }
 }

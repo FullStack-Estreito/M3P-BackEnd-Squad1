@@ -10,9 +10,6 @@ namespace LabSchoolAPI.DTOs
 {
     public class EnderecoCreateDTO
     {
-        //[Required]
-
-        //public EnderecoReadDTO Endereco { get; set; } 
         
         [Required(ErrorMessage = "Campo Obrigatório")]
         [MaxLength(9, ErrorMessage = "Digite o cep nesse formato: XXXXX-XXX")]

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace LabSchoolAPI.DTOs
 {
-    public class UserLoginDTO
+    public class UsuarioLoginDTO
     {
         [Required]
         public string Email { get; set; }

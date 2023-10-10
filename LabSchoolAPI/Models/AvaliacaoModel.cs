@@ -26,9 +26,6 @@ namespace LabSchoolAPI.Models
         public double Nota { get; set; }
 
         [Required]
-        public bool StatusAtivo { get; set; }  // Status (Ativo/Inativo)
-
-        [Required]
         public double PontuacaoMaxima {get; set;}
 
         [Column(TypeName = "VARCHAR"), Required, StringLength(10)] // yyyy-mm-dd 
