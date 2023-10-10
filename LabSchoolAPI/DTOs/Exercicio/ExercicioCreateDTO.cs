@@ -10,7 +10,8 @@ namespace LabSchoolAPI.DTOs
     public class ExercicioCreateDTO
     {
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [MaxLength(50, ErrorMessage = "Este campo aceita até 50 caracteres")]
+        [MaxLength(64, ErrorMessage = "Este campo aceita até 64 caracteres")]
+        [MinLength(8, ErrorMessage = "Este campo aceita no mínimo 8 caracteres")]
         public string Titulo {get; set;}
 
         [Required(ErrorMessage = "Campo Obrigatório")]
@@ -18,7 +19,8 @@ namespace LabSchoolAPI.DTOs
         public string Materia { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório")]
-        [MaxLength(500, ErrorMessage = "Este campo aceita até 500 caracteres")]
+        [MaxLength(255, ErrorMessage = "Este campo aceita até 255 caracteres")]
+        [MinLength(15, ErrorMessage = "Este campo aceita no mínimo 15 caracteres")]
         public string Descricao { get; set; }
 
         [Required]
