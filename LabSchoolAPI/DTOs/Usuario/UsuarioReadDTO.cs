@@ -4,14 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using LabSchoolAPI.Enums;
 using System.ComponentModel.DataAnnotations;
-using LabSchoolAPI.DTOs.Endereco;
 
-namespace LabSchoolAPI.DTOs.Usuario
+namespace LabSchoolAPI.DTOs
 {
     public class UsuarioReadDTO
     {
-        public int UsuarioId { get; set; }
-
         public string Nome { get; set; }
 
         public TipoGenero Genero { get; set; }
@@ -23,7 +20,7 @@ namespace LabSchoolAPI.DTOs.Usuario
         [EmailAddress]
         public string Email { get; set; }
 
-        public TipoUsuario Tipo { get; set; }
+        public TipoUsuario TipoUsuario { get; set; }
 
         public EnderecoReadDTO Endereco { get; set; } 
 

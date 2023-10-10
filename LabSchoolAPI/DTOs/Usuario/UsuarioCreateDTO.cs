@@ -9,27 +9,28 @@ namespace LabSchoolAPI.DTOs
 {
     public class UsuarioCreateDTO
     {
-        [Required]
-        [StringLength(200)]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [MaxLength(150, ErrorMessage = "Este campo aceita até 150 caracteres")]
         public string Nome { get; set; }
 
         [Required]
         public TipoGenero Genero { get; set; }
 
-        [Required]
-        [StringLength(11)]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [MaxLength(11, ErrorMessage = "Digite o cpf sem pontuação: XXXXXXXXXXX")]
+        [MinLength(11, ErrorMessage = "Digite o cpf sem pontuação: XXXXXXXXXXX")]
         public string Cpf { get; set; }
 
         [Required]
         public bool StatusAtivo { get; set; }
 
-        [Required]
-        [StringLength(15)]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [MaxLength(15, ErrorMessage = "Digite o telefone nesse formato: (XX) XXXXX-XXXX")]
+        [MinLength(15, ErrorMessage = "Digite o telefone nesse formato: (XX) XXXXX-XXXX")]
         public string Telefone { get; set; }
 
-        [Required]
-        [EmailAddress]
-        [StringLength(100)]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [MaxLength(100, ErrorMessage = "Este campo aceita até 100 caracteres")]
         public string Email { get; set; }
 
         // [Required]
@@ -37,12 +38,15 @@ namespace LabSchoolAPI.DTOs
         // public string Senha { get; set; }
 
         [Required]
-        public TipoUsuario Tipo { get; set; }
+        public TipoUsuario TipoUsuario { get; set; }
 
-        public double Matricula { get; set; }
+        public int Matricula { get; set; }
 
-        public int ProfessorId { get; set; }
+        public int CodigoProfessor { get; set; }
 
         public int WhiteLabelId { get; set; }
+
+        [Required]
+        public EnderecoCreateDTO Endereco { get; set; } 
     }
  }

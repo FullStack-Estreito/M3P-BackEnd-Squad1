@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LabSchoolAPI.DTOs.Exercicio
+namespace LabSchoolAPI.DTOs
 {
     public class ExercicioReadDTO
     {
@@ -18,12 +18,12 @@ namespace LabSchoolAPI.DTOs.Exercicio
         public string Descricao { get; set; }
 
         
-        public int ProfessorId { get; set; }
+        public int CodigoProfessor { get; set; }
 
         
         public int AlunoId { get; set; }
 
         
-        public DateTime DataConclusao { get; set; }
+        public string DataConclusao { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 namespace LabSchoolAPI.DTOs
 {
     public class AtendimentoReadDTO
-    {
-        public DateTime Data { get; set; }
+    {   
+        public string DataHora { get; set; }
 
         public string Descricao { get; set; }
 

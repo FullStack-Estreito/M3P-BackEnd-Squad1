@@ -12,12 +12,13 @@ namespace LabSchoolAPI.DTOs
 
         public double Nota { get; set; }
 
-        public DateTime DataRealizacao { get; set; }
+        public string DataRealizacao { get; set; }
 
-        public int AvaliacaoId { get; set; }
-
-        public int ProfessorId { get; set; }
+        public int CodigoProfessor { get; set; }
 
         public int AlunoId { get; set; }
+
+        public bool StatusAtivo { get; set; }
+
     }
 }

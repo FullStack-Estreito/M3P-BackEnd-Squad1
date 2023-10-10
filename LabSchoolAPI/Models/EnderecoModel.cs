@@ -7,39 +7,35 @@ using System.ComponentModel.DataAnnotations;
 using LabSchoolAPI.Enums;
 
 namespace LabSchoolAPI.Models
-{
+{   
+    [Table("Endereco")]
     public class EnderecoModel
     {
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        [StringLength(9)] // CEP no formato XXXXX-XXX
+        [Column(TypeName = "VARCHAR"), Required, StringLength(9)]  // CEP no formato XXXXX-XXX
         public string Cep { get; set; }
 
-        [Required]
-        [StringLength(100)]
+       [Column(TypeName = "VARCHAR"), Required, StringLength(100)] 
         public string Cidade { get; set; }
 
         [Required]
         public TipoEstado Estado { get; set; } //enum
 
-        [Required]
-        [StringLength(255)]
+        [Column(TypeName = "VARCHAR"), Required, StringLength(20)] 
         public string Logradouro { get; set; }
 
-        [Required]
-        [StringLength(10)] 
+        [Column(TypeName = "VARCHAR"), Required, StringLength(10)] 
         public string Numero { get; set; }
 
-        [StringLength(100)] // Campo opcional
+        [Column(TypeName = "VARCHAR"), StringLength(100)]  // Campo opcional
         public string Complemento { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [Column(TypeName = "VARCHAR"), Required, StringLength(120)] 
         public string Bairro { get; set; }
 
-        [StringLength(255)] // Campo opcional
+        [Column(TypeName = "VARCHAR"), StringLength(120)]  // Campo opcional
         public string Referencia { get; set; }
     }
 }

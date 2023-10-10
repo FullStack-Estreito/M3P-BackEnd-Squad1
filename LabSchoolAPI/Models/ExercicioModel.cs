@@ -4,36 +4,35 @@ using System;
 
 
 namespace LabSchoolAPI.Models
-{
+{   
+    [Table("Exercicio")]
     public class ExercicioModel 
     {
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        [StringLength(50)]
+        [Column(TypeName = "VARCHAR"), Required, StringLength(50)] 
         public string Materia { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [Column(TypeName = "VARCHAR"), Required, StringLength(50)] 
         public string Titulo { get; set; }
 
-        [Required]
-        [StringLength(200)]
+        [Column(TypeName = "VARCHAR"), Required, StringLength(500)] 
         public string Descricao { get; set; }
 
         [Required]
-        public DateTime DataConclusao { get; set; }
+        public int CodigoProfessor { get; set; }
+
+        [Column(TypeName = "VARCHAR"), Required, StringLength(10)] // yyyy-mm-dd ou dd-mm-yyyy
+        public string DataConclusao { get; set; }
 
 
         // Chaves e relacionamentos abaixo
 
-        public int AlunoID { get; set; }
+        [ForeignKey("AlunoId")]
+        public int AlunoId { get; set; }
 
         public virtual UsuarioModel Aluno { get; set; }
         
-        public int ProfessorID { get; set; }
-        
-        public virtual UsuarioModel Professor { get; set; }
     }
 }
