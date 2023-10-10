@@ -18,61 +18,42 @@ namespace LabSchoolAPI.Services.Repositories
             _context = context;
         }
 
-        public async Task<Atendimento> CreateAtendimento(AtendimentoCreateDTO atendimentoDto)
-        {
-            var atendimento = new Atendimento
-            {
-                Data = atendimentoDto.Data,
-                Descricao = atendimentoDto.Descricao,
-                AlunoId = atendimentoDto.AlunoId,
-                PedagogoId = atendimentoDto.PedagogoId,
-                StatusAtivo = atendimentoDto.StatusAtivo
-            };
-
-            _context.Atendimentos.Add(atendimento);
-            await _context.SaveChangesAsync();
-
-            return atendimento;
-        }
-
-        public async Task<IEnumerable<Atendimento>> GetAllAtendimentos()
+        public async Task<IEnumerable<Atendimento>> GetAllAsync()
         {
             return await _context.Atendimentos.ToListAsync();
         }
 
-        public async Task<Atendimento> GetAtendimentoById(int id)
+        public async Task<Atendimento> GetByIdAsync(int id)
         {
             return await _context.Atendimentos.FindAsync(id);
         }
 
-        public async Task<bool> UpdateAtendimento(AtendimentoUpdateDTO atendimentoDto)
+        public async Task<Atendimento> CreateAsync(Atendimento atendimento)
         {
-            var atendimento = await _context.Atendimentos.FindAsync(atendimentoDto.AtendimentoId);
-            if (atendimento == null)
-                return false;
-
-            atendimento.Data = atendimentoDto.Data;
-            atendimento.Descricao = atendimentoDto.Descricao;
-            atendimento.AlunoId = atendimentoDto.AlunoId;
-            atendimento.PedagogoId = atendimentoDto.PedagogoId;
-            atendimento.StatusAtivo = atendimentoDto.StatusAtivo;
-
-            _context.Atendimentos.Update(atendimento);
+            _context.Atendimentos.Add(atendimento);
             await _context.SaveChangesAsync();
-
-            return true;
+            return atendimento;
         }
 
-        public async Task<bool> DeleteAtendimento(int id)
+        public async Task UpdateAsync(Atendimento atendimento)
+        {
+            _context.Entry(atendimento).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(int id)
         {
             var atendimento = await _context.Atendimentos.FindAsync(id);
-            if (atendimento == null)
-                return false;
+            if (atendimento != null)
+            {
+                _context.Atendimentos.Remove(atendimento);
+                await _context.SaveChangesAsync();
+            }
+        }
 
-            _context.Atendimentos.Remove(atendimento);
-            await _context.SaveChangesAsync();
-
-            return true;
+        public async Task<bool> ExistsAsync(int id)
+        {
+            return await _context.Atendimentos.AnyAsync(a => a.Id == id);
         }
     }
 }
