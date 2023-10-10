@@ -14,5 +14,7 @@ namespace LabSchoolAPI.Services.Interfaces
         Task<Atendimento> GetAtendimentoById(int id);
         Task<bool> UpdateAtendimento(AtendimentoUpdateDTO atendimentoDto);
         Task<bool> DeleteAtendimento(int id);
+        Task<bool> ExistsAsync(int id);
     }
+
 }
