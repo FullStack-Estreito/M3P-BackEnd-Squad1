@@ -39,7 +39,7 @@ namespace LabSchoolAPI.Models
 
         // Chaves e relacionamentos abaixo
 
-        [ForeingKey("AlunoId")]
+        [ForeignKey("AlunoId")]
         public int AlunoId { get; set; }
 
         public virtual UsuarioModel Aluno { get; set; }
