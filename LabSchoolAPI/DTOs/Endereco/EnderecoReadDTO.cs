@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using LabSchoolAPI.Enums;
 
-namespace LabSchoolAPI.DTOs.Endereco
+namespace LabSchoolAPI.DTOs
 {
     public class EnderecoReadDTO
     {

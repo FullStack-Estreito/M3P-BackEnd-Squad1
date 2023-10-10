@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace LabSchoolAPI.DTOs.Usuario
+namespace LabSchoolAPI.DTOs
 {
     public class UserLoginDTO
     {

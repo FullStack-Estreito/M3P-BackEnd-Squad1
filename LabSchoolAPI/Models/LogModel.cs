@@ -7,25 +7,23 @@ using System.ComponentModel.DataAnnotations;
 using LabSchoolAPI.Enums;
 
 namespace LabSchoolAPI.Models
-{
-        public class LogModel
+{   
+    [Table("Log")]    
+    public class LogModel
     {
         [Key]
         public int Id { get; set; }
 
         [Required]
-        public DateTime DataHoraAtividade { get; set; }
-
-        [Required]
         public TipoAtividade Atividade { get; set; }
 
-        [Required]
-        [StringLength(250)] 
+        [Column(TypeName = "VARCHAR"), Required, StringLength(250)] 
         public string Descricao { get; set; }
 
 
         // Chaves e relacionamentos abaixo //
-        public int UsuarioID { get; set; }
+        [ForeignKey("UsuarioId")]
+        public int UsuarioId { get; set; }
 
         public virtual UsuarioModel Usuario { get; set; }
     }
