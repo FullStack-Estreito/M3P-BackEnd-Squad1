@@ -8,7 +8,8 @@ namespace LabSchoolAPI.DTOs
 {
     public class UsuarioResetarSenhaDTO
     {
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório")]
+        [MaxLength(100, ErrorMessage = "Este campo aceita até 100 caracteres")]
         public string Email { get; set; }
     }
 }

@@ -14,10 +14,10 @@ namespace LabSchoolAPI.Models
         [Column(TypeName = "VARCHAR"), Required, StringLength(50)] 
         public string Materia { get; set; }
 
-        [Column(TypeName = "VARCHAR"), Required, StringLength(50)] 
+        [Column(TypeName = "VARCHAR"), Required, StringLength(64)] 
         public string Titulo { get; set; }
 
-        [Column(TypeName = "VARCHAR"), Required, StringLength(500)] 
+        [Column(TypeName = "VARCHAR"), Required, StringLength(255)] 
         public string Descricao { get; set; }
 
         [Required]
