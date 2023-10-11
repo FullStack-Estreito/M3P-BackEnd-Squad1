@@ -10,8 +10,6 @@ namespace LabSchoolAPI.Services.Interfaces
         Task<LogReadDTO> CreateAsync(LogCreateDTO logCreateDTO);
         Task<IEnumerable<LogReadDTO>> GetAllAsync();
         Task<LogReadDTO> GetByIdAsync(int id);
-        Task UpdateAsync(LogUpdateDTO logUpdateDTO);
-        Task DeleteAsync(int id);
         Task<bool> ExistsAsync(int id);
     }
 }
