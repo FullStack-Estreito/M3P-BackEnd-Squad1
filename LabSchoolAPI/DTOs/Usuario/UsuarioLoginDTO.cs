@@ -11,8 +11,7 @@ namespace LabSchoolAPI.DTOs
         [Required]
         public string Email { get; set; }
 
-        // [Required]
-        // public string Senha { get; set; }
+        [Required]
+        public string Password { get; set; }  // renomeado de Senha para Password
     }
-
 }
