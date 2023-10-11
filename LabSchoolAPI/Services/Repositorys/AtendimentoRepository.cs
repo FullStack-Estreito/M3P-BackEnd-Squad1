@@ -1,42 +1,50 @@
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LabSchoolAPI.Models;
+using LabSchoolAPI.Context;
 using LabSchoolAPI.DTOs;
 using LabSchoolAPI.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using AutoMapper;
 
-namespace LabSchoolAPI.Services.Repositories
+namespace LabSchoolAPI.Services.Repositorys
 {
     public class AtendimentoRepository : IAtendimentoRepository
     {
         private readonly LabSchoolContext _context;
+        private readonly IMapper _mapper;
 
-        public AtendimentoRepository(LabSchoolContext context)
+        public AtendimentoRepository(LabSchoolContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
-        public async Task<IEnumerable<Atendimento>> GetAllAsync()
+        public async Task<AtendimentoReadDTO> CreateAsync(AtendimentoCreateDTO atendimentoCreateDTO)
         {
-            return await _context.Atendimentos.ToListAsync();
-        }
-
-        public async Task<Atendimento> GetByIdAsync(int id)
-        {
-            return await _context.Atendimentos.FindAsync(id);
-        }
-
-        public async Task<Atendimento> CreateAsync(Atendimento atendimento)
-        {
+            var atendimento = _mapper.Map<AtendimentoModel>(atendimentoCreateDTO);
             _context.Atendimentos.Add(atendimento);
             await _context.SaveChangesAsync();
-            return atendimento;
+            return _mapper.Map<AtendimentoReadDTO>(atendimento);
         }
 
-        public async Task UpdateAsync(Atendimento atendimento)
+        public async Task<IEnumerable<AtendimentoReadDTO>> GetAllAsync()
         {
+            var atendimentos = await _context.Atendimentos.ToListAsync();
+            return _mapper.Map<IEnumerable<AtendimentoReadDTO>>(atendimentos);
+        }
+
+        public async Task<AtendimentoReadDTO> GetByIdAsync(int id)
+        {
+            var atendimento = await _context.Atendimentos.FindAsync(id);
+            return _mapper.Map<AtendimentoReadDTO>(atendimento);
+        }
+
+        public async Task UpdateAsync(AtendimentoUpdateDTO atendimentoUpdateDTO)
+        {
+            var atendimento = _mapper.Map<AtendimentoModel>(atendimentoUpdateDTO);
             _context.Entry(atendimento).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
