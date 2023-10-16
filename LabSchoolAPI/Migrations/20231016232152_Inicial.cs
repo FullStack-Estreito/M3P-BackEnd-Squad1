@@ -123,7 +123,6 @@ namespace LabSchoolAPI.Migrations
                     Materia = table.Column<string>(type: "VARCHAR(50)", maxLength: 50, nullable: false),
                     Descricao = table.Column<string>(type: "VARCHAR(500)", maxLength: 500, nullable: false),
                     Nota = table.Column<double>(type: "float", nullable: false),
-                    StatusAtivo = table.Column<bool>(type: "bit", nullable: false),
                     PontuacaoMaxima = table.Column<double>(type: "float", nullable: false),
                     DataRealizacao = table.Column<string>(type: "VARCHAR(10)", maxLength: 10, nullable: false),
                     CodigoProfessor = table.Column<int>(type: "int", nullable: false),

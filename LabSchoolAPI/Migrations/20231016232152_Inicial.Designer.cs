@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LabSchoolAPI.Migrations
 {
     [DbContext(typeof(LabSchoolContext))]
-    [Migration("20231010181404_Inicial")]
+    [Migration("20231016232152_Inicial")]
     partial class Inicial
     {
         /// <inheritdoc />
@@ -94,9 +94,6 @@ namespace LabSchoolAPI.Migrations
 
                     b.Property<double>("PontuacaoMaxima")
                         .HasColumnType("float");
-
-                    b.Property<bool>("StatusAtivo")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
