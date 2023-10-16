@@ -92,9 +92,6 @@ namespace LabSchoolAPI.Migrations
                     b.Property<double>("PontuacaoMaxima")
                         .HasColumnType("float");
 
-                    b.Property<bool>("StatusAtivo")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Titulo")
                         .IsRequired()
                         .HasMaxLength(50)
