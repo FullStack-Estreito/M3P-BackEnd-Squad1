@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj": {}
+    "/home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj": {}
   },
   "projects": {
-    "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj": {
+    "/home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj",
+        "projectUniqueName": "/home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj",
         "projectName": "LabSchoolAPI",
-        "projectPath": "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj",
-        "packagesPath": "/Users/alexandrenolla/.nuget/packages/",
-        "outputPath": "/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/",
+        "projectPath": "/home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/LabSchoolAPI.csproj",
+        "packagesPath": "/home/feredragon/.nuget/packages/",
+        "outputPath": "/home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/alexandrenolla/.nuget/NuGet/NuGet.Config"
+          "/home/feredragon/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "/home/feredragon/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -98,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/feredragon/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
         }
       }
     }
