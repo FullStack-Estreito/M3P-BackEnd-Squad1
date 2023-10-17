@@ -1,6 +1,6 @@
 using LabSchoolAPI.Context;
-using LabSchoolAPI.Services.Interfaces;
-using LabSchoolAPI.Services.Repositorys;
+using LabSchoolAPI.Services.Interfaces; 
+using LabSchoolAPI.Services.Repositorys; 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,7 +9,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // string de conexão
-string connectionString = "Data Source=ROGERIO-MATTOS\\SQLEXPRESS;User ID=sa;Password=1234;Database=LabSchoolDb;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+string connectionString = "Server=127.0.0.1,1433;Database=testApiPortal;User Id=sa;Password=P@ssw0rd123!;TrustServerCertificate=True;";
 builder.Services.AddDbContext<LabSchoolContext>(options => options.UseSqlServer(connectionString));
 
 //  autenticação JWT
@@ -27,15 +27,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
     });
-    
-// Registra os serviços dos repositórios
+
+// Registra o serviço do repositório de usuários
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IWhiteLabelRepository, WhiteLabelRepository>();
-builder.Services.AddScoped<ILogRepository, LogRepository>();
-builder.Services.AddScoped<IExercicioRepository, ExercicioRepository>();
-builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
-builder.Services.AddScoped<IAvaliacaoRepository, AvaliacaoRepository>();
-builder.Services.AddScoped<IAtendimentoRepository, AtendimentoRepository>();
+
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -56,10 +52,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();  // Certifique-se de adicionar essa linha
+app.UseAuthentication();  // adicionar essa linha
 app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
+
 
