@@ -19,6 +19,8 @@ namespace FichaCadastroApi.AutoMapper
             CreateMap<WhiteLabelModel, WhiteLabelCreateDTO>();
             CreateMap<WhiteLabelModel, WhiteLabelUpdateDTO>();
             CreateMap<WhiteLabelModel, WhiteLabelReadDTO>();
+            CreateMap<WhiteLabelCreateDTO, WhiteLabelModel>();
+
 
             // ENDEREÇO
             CreateMap<EnderecoModel, EnderecoCreateDTO>();
