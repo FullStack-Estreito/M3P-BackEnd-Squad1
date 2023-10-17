@@ -1,4 +1,7 @@
+using System.IdentityModel.Tokens.Jwt;
 using System.Net;
+using System.Security.Claims;
+using System.Text;
 using AutoMapper;
 using LabSchoolAPI.Context;
 using LabSchoolAPI.DTOs;
@@ -18,12 +21,16 @@ namespace LabSchoolAPI.Controllers
        private readonly LabSchoolContext _labSchoolContext;
        private readonly IUsuarioRepository _usuarioRepository;
        private readonly IMapper _mapper; 
+       private readonly ILogger<UsuariosController> _logger;
+       private readonly IConfiguration _configuration;
 
-       public UsuariosController(LabSchoolContext labSchoolContext, IUsuarioRepository usuarioRepository, IMapper mapper) 
+       public UsuariosController(LabSchoolContext labSchoolContext, IUsuarioRepository usuarioRepository, IMapper mapper, ILogger<UsuariosController> logger, IConfiguration configuration) 
        {
             _labSchoolContext = labSchoolContext;
             _usuarioRepository = usuarioRepository;
             _mapper = mapper;
+            _logger = logger;
+            _configuration = configuration;
        } 
 
        [HttpGet]
@@ -31,7 +38,7 @@ namespace LabSchoolAPI.Controllers
        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
        [ProducesResponseType(StatusCodes.Status404NotFound)]
        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-       public ActionResult<IEnumerable<UsuarioReadDTO>> Get([FromQuery] string? tipoUsuario, string? nome, string? telefone, string? cpf)
+       public async Task<IActionResult> GetAll([FromQuery] string? tipoUsuario, string? nome, string? telefone, string? cpf)
        {
             try
             {
@@ -59,7 +66,7 @@ namespace LabSchoolAPI.Controllers
                             return NotFound(new { erro = "Nome não encontrado." });
                         }
                     }
-                    if (!telefone.IsNullOrEmpty())
+                    else if (!telefone.IsNullOrEmpty())
                     {
                         usuarioModels = _labSchoolContext.Usuarios
                                                             .Where(w => w.Telefone == telefone)
@@ -70,7 +77,7 @@ namespace LabSchoolAPI.Controllers
                             return NotFound(new { erro = "Telefone não encontrado." });
                         }
                     }
-                    if (!cpf.IsNullOrEmpty())
+                    else if (!cpf.IsNullOrEmpty())
                     {
                         usuarioModels = _labSchoolContext.Usuarios
                                                             .Where(w => w.Cpf == cpf)
@@ -81,7 +88,7 @@ namespace LabSchoolAPI.Controllers
                             return NotFound(new { erro = "Cpf não encontrado." });
                         }
                     }
-                    if (!tipoUsuario.IsNullOrEmpty() && (tipoUsuario != "Administrador" && tipoUsuario != "Pedagogo" && tipoUsuario != "Professor" && tipoUsuario != "Aluno"))
+                    else if (!tipoUsuario.IsNullOrEmpty() && (tipoUsuario != "Administrador" && tipoUsuario != "Pedagogo" && tipoUsuario != "Professor" && tipoUsuario != "Aluno"))
                     {
                         return BadRequest("Valor informado inválido. Tente novamente com um dos valores válidos para o Tipo de Usuário: Administrador, Pedagogo, Professor ou Aluno.");
                     }
@@ -100,7 +107,7 @@ namespace LabSchoolAPI.Controllers
 
                 }
 
-                var usuarioReadDTO = _mapper.Map<List<UsuarioReadDTO>>(usuarioModels);
+                var usuarioReadDTO = await _usuarioRepository.GetAllAsync();
                 return Ok(usuarioReadDTO);
             }
             catch (Exception ex)
@@ -113,18 +120,17 @@ namespace LabSchoolAPI.Controllers
        [ProducesResponseType(StatusCodes.Status200OK)]
        [ProducesResponseType(StatusCodes.Status404NotFound)]
        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-       public ActionResult<UsuarioReadDTO> Get(int id)
+       public async Task<IActionResult> GetById(int id)
        {
             try
             {
-                var usuarioModel = _labSchoolContext.Usuarios.Find(id);
+                var usuarioReadDTO = _usuarioRepository.GetByIdAsync(id);
 
-                if (usuarioModel == null)
+                if (usuarioReadDTO == null)
                 {
                     return NotFound(new { erro = "Usuário não encontrado." });
                 }
 
-                var usuarioReadDTO = _mapper.Map<UsuarioReadDTO>(usuarioModel);
                 return Ok(usuarioReadDTO);
             }
             catch (Exception ex)
@@ -137,17 +143,11 @@ namespace LabSchoolAPI.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<UsuarioReadDTO> Post([FromBody] UsuarioCreateDTO usuarioCreateDTO)
+        public async Task<IActionResult> Post([FromBody] UsuarioCreateDTO usuarioCreateDTO)
         {
             try
             {
-                var usuarioModel = _mapper.Map<UsuarioModel>(usuarioCreateDTO);
-
-                _labSchoolContext.Usuarios.Add(usuarioModel);
-                _labSchoolContext.SaveChanges();
-
-
-                var usuarioReadDTO = _mapper.Map<UsuarioReadDTO>(usuarioModel);
+                var usuarioReadDTO = await _usuarioRepository.CreateAsync(usuarioCreateDTO);
 
                 return StatusCode(StatusCodes.Status201Created, usuarioReadDTO);
             }
@@ -162,45 +162,56 @@ namespace LabSchoolAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<UsuarioReadDTO> Post([FromBody] UsuarioLoginDTO usuarioLoginDTO)
+        public async Task<IActionResult> Post([FromBody] UsuarioLoginDTO usuarioLoginDTO)
         {
             try
             {
-                var usuarioModel = _mapper.Map<UsuarioModel>(usuarioLoginDTO);
+                var user = await _usuarioRepository.LoginAsync(usuarioLoginDTO);
+                if (user == null)
+                    return Unauthorized("Credenciais inválidas.");
 
-                // IMPLEMENTAR LÓGICA DE GERAÇÃO DE TOKEN DE ACESSO NO RESPONSE //
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"] ?? string.Empty);
+                var tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(new Claim[]
+                    {
+                        new Claim(ClaimTypes.Name, user.Nome.ToString())
+                    }),
+                    Expires = DateTime.UtcNow.AddDays(1),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                };
+                var token = tokenHandler.CreateToken(tokenDescriptor);
+                var tokenString = tokenHandler.WriteToken(token);
 
-                var usuarioReadDTO = _mapper.Map<UsuarioReadDTO>(usuarioModel);
-
-                return Ok(usuarioReadDTO);
+                return Ok(new
+                {
+                    Token = tokenString,
+                    Matricula = user.Matricula,
+                    Nome = user.Nome,
+                    Email = user.Email
+                });
             }
             catch (Exception ex)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError.GetHashCode(), ex.Message);
+                _logger.LogError(ex, "Erro durante a autenticação.");
+                return StatusCode(StatusCodes.Status500InternalServerError, new { Error = "Ocorreu um erro durante a autenticação." });
             }
-
         }
 
         [HttpPatch("resetar")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<UsuarioReadDTO> Patch([FromBody] UsuarioResetarSenhaDTO usuarioResetarSenhaDTO)
+        public async Task<IActionResult> Patch([FromBody] UsuarioResetarSenhaDTO usuarioResetarSenhaDTO)
         {
             try
             {
-                var usuarioModel = _mapper.Map<UsuarioModel>(usuarioResetarSenhaDTO);
+                bool result = await _usuarioRepository.ResetPasswordAsync(usuarioResetarSenhaDTO);
+                if (!result)
+                    return BadRequest("Não foi possível alterar a senha.");
 
-
-                // IMPLEMENTAR LÓGICA DE RESET DE ACESSO //
-
-                _labSchoolContext.Usuarios.Add(usuarioModel);
-                _labSchoolContext.SaveChanges();
-
-
-                var usuarioReadDTO = _mapper.Map<UsuarioReadDTO>(usuarioModel);
-
-                return Ok(usuarioReadDTO);
+                return Ok("Senha alterada com sucesso.");
             }
             catch (Exception ex)
             {
@@ -213,30 +224,37 @@ namespace LabSchoolAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public ActionResult<UsuarioReadDTO> Put(int id, [FromBody] UsuarioUpdateDTO usuarioUpdateDTO)
-        {
-            try
+        public async Task<UsuarioReadDTO> Put(int id, [FromBody] UsuarioUpdateDTO usuarioUpdateDTO)
+        {   
+
+            if (await _usuarioRepository.ExistsAsync(id))
             {
-                var usuarioModel = _labSchoolContext.Usuarios.Where(w => w.Id == id).FirstOrDefault();
-
-                if (usuarioModel == null)
-                {
-                    return NotFound(new { erro = "Registro não encontrado." });
-                }
-
-                usuarioModel = _mapper.Map(usuarioUpdateDTO, usuarioModel);
-
-                _labSchoolContext.Usuarios.Update(usuarioModel);
-                _labSchoolContext.SaveChanges();
-
-                var usuarioReadDTO = _mapper.Map<UsuarioReadDTO>(usuarioModel);
-
-                return Ok(usuarioReadDTO);
+                await _usuarioRepository.UpdateAsync(usuarioUpdateDTO);
+                return NoContent();
             }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex);
-            }
+            return NotFound();
+            // try
+            // {
+            //     var usuarioModel = _labSchoolContext.Usuarios.Where(w => w.Id == id).FirstOrDefault();
+
+            //     if (usuarioModel == null)
+            //     {
+            //         return NotFound(new { erro = "Registro não encontrado." });
+            //     }
+
+            //     usuarioModel = _mapper.Map(usuarioUpdateDTO, usuarioModel);
+
+            //     _labSchoolContext.Usuarios.Update(usuarioModel);
+            //     _labSchoolContext.SaveChanges();
+
+            //     var usuarioReadDTO = _mapper.Map<UsuarioReadDTO>(usuarioModel);
+
+            //     return Ok(usuarioReadDTO);
+            // }
+            // catch (Exception ex)
+            // {
+            //     return StatusCode(500, ex);
+            // }
 
         }
 
@@ -246,25 +264,31 @@ namespace LabSchoolAPI.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public ActionResult Delete(int id)
         {
-            try
+            if (await _usuarioRepository.ExistsAsync(id))
             {
-                var usuarioModel = _labSchoolContext.Usuarios.Where(w => w.Id == id).FirstOrDefault();
-
-                if (usuarioModel == null)
-                {
-                    return NotFound(new { erro = "Registro não encontrado." });
-                }
-
-                _labSchoolContext.Usuarios.Remove(usuarioModel);
-                _labSchoolContext.SaveChanges();
-
-                return StatusCode(204);
-
+                await _usuarioRepository.DeleteAsync(id);
+                return NoContent();
             }
-            catch (Exception ex)
-            {
-                return StatusCode(500, ex);
-            }
+            return NotFound();
+            // try
+            // {
+            //     var usuarioModel = _labSchoolContext.Usuarios.Where(w => w.Id == id).FirstOrDefault();
+
+            //     if (usuarioModel == null)
+            //     {
+            //         return NotFound(new { erro = "Registro não encontrado." });
+            //     }
+
+            //     _labSchoolContext.Usuarios.Remove(usuarioModel);
+            //     _labSchoolContext.SaveChanges();
+
+            //     return StatusCode(204);
+
+            // }
+            // catch (Exception ex)
+            // {
+            //     return StatusCode(500, ex);
+            // }
         }
     }
 }
