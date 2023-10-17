@@ -31,6 +31,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 // Registra o serviço do repositório de usuários
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IWhiteLabelRepository, WhiteLabelRepository>();
+builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
+
 
 
 // Add services to the container.

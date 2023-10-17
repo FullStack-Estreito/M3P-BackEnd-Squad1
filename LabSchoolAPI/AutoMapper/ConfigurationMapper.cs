@@ -26,6 +26,7 @@ namespace FichaCadastroApi.AutoMapper
             CreateMap<EnderecoModel, EnderecoCreateDTO>();
             CreateMap<EnderecoModel, EnderecoUpdateDTO>();
             CreateMap<EnderecoModel, EnderecoReadDTO>();
+            CreateMap<EnderecoCreateDTO, EnderecoModel>();
 
             // EXERCICIO
             CreateMap<ExercicioModel, ExercicioCreateDTO>();
