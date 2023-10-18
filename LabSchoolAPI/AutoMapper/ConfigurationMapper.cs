@@ -14,6 +14,7 @@ namespace FichaCadastroApi.AutoMapper
             CreateMap<UsuarioModel, UsuarioReadDTO>();
             CreateMap<UsuarioModel, UsuarioLoginDTO>();
             CreateMap<UsuarioModel, UsuarioResetarSenhaDTO>();
+            CreateMap<UsuarioCreateDTO, UsuarioModel>();
 
             // WHITELABEL
             CreateMap<WhiteLabelModel, WhiteLabelCreateDTO>();
