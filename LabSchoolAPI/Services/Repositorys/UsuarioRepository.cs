@@ -24,13 +24,23 @@ namespace LabSchoolAPI.Services.Repositorys
             _mapper = mapper;
         }
 
-        public async Task<UsuarioReadDTO> CreateAsync(UsuarioCreateDTO usuarioCreateDTO)
+       public async Task<UsuarioReadDTO> CreateAsync(UsuarioCreateDTO usuarioCreateDTO)
         {
             var usuario = _mapper.Map<UsuarioModel>(usuarioCreateDTO);
+            
+            // Criar hash e salt da senha fornecida
+            byte[] passwordHash, passwordSalt;
+            CreatePasswordHash(usuarioCreateDTO.Senha, out passwordHash, out passwordSalt);
+            
+            // Atualizar o modelo do usuário com hash e salt
+            usuario.PasswordHash = passwordHash;
+            usuario.PasswordSalt = passwordSalt;
+
             _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
             return _mapper.Map<UsuarioReadDTO>(usuario);
         }
+
 
         public async Task<IEnumerable<UsuarioReadDTO>> GetAllAsync()
         {

@@ -33,9 +33,9 @@ namespace LabSchoolAPI.DTOs
         [MaxLength(100, ErrorMessage = "Este campo aceita até 100 caracteres")]
         public string Email { get; set; }
 
-        // [Required]
-        // [StringLength(100)]
-        // public string Senha { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string Senha { get; set; }
 
         [Required]
         public TipoUsuario TipoUsuario { get; set; }
