@@ -43,6 +43,9 @@ namespace FichaCadastroApi.AutoMapper
             CreateMap<AtendimentoModel, AtendimentoCreateDTO>();
             CreateMap<AtendimentoModel, AtendimentoUpdateDTO>();
             CreateMap<AtendimentoModel, AtendimentoReadDTO>();
+            CreateMap<AtendimentoCreateDTO, AtendimentoModel >();
+            CreateMap<AtendimentoUpdateDTO, AtendimentoModel>();
+            
 
             // LOG
              CreateMap<LogModel, LogCreateDTO>();
