@@ -50,10 +50,10 @@ namespace LabSchoolAPI.Controllers
 
         
         [HttpPost]
-        public async Task<IActionResult> Create(UsuarioCreateDTO userDto)
+        public async Task<IActionResult> Create(UsuarioCreateDTO userDto, EnderecoCreateDTO enderecoCreateDTO)
         {
             var user = await _usuarioRepository.CreateAsync(userDto);
-            var endereco = await _enderecoRepository.CreateAsync(userDto);
+            var endereco = await _enderecoRepository.CreateAsync(enderecoCreateDTO);
             return CreatedAtAction(nameof(GetById), new { id = user.Matricula }, user);// estava pedindo ID aki no lugar da matricula. Adicione a propriedade "Id" em UsuarioReadDTO.
         }
 
