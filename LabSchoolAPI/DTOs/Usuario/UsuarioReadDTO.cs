@@ -9,6 +9,7 @@ namespace LabSchoolAPI.DTOs
 {
     public class UsuarioReadDTO
     {
+        public int Id{ get; set; }
         public string Nome { get; set; }
 
         public TipoGenero Genero { get; set; }

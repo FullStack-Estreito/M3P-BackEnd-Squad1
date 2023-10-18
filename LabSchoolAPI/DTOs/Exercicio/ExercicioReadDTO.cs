@@ -7,7 +7,8 @@ namespace LabSchoolAPI.DTOs
 {
     public class ExercicioReadDTO
     {
-        public int ExercicioId { get; set; }
+        
+        public int Id { get; set; }
         
         public string Titulo {get; set;}
 
