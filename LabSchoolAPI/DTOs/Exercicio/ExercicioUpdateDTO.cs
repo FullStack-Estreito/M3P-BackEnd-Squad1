@@ -8,6 +8,8 @@ namespace LabSchoolAPI.DTOs
 {
     public class ExercicioUpdateDTO
     {   
+        public int Id { get; set; }
+        
         [MaxLength(64, ErrorMessage = "Este campo aceita até 64 caracteres")]
         [MinLength(8, ErrorMessage = "Este campo aceita no mínimo 8 caracteres")]
         public string Titulo {get; set;}
