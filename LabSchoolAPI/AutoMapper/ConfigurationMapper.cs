@@ -38,6 +38,8 @@ namespace FichaCadastroApi.AutoMapper
             CreateMap<AvaliacaoModel, AvaliacaoCreateDTO>();
             CreateMap<AvaliacaoModel, AvaliacaoUpdateDTO>();
             CreateMap<AvaliacaoModel, AvaliacaoReadDTO>();
+            CreateMap<AvaliacaoCreateDTO, AvaliacaoModel>();
+            CreateMap<AvaliacaoUpdateDTO, AvaliacaoModel>();
 
             // ATENDIMENTO
             CreateMap<AtendimentoModel, AtendimentoCreateDTO>();

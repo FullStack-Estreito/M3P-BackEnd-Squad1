@@ -33,7 +33,7 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<IWhiteLabelRepository, WhiteLabelRepository>();
 builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 builder.Services.AddScoped<IAtendimentoRepository, AtendimentoRepository>();
-
+builder.Services.AddScoped<IAvaliacaoRepository, AvaliacaoRepository>();
 
 
 // Add services to the container.
