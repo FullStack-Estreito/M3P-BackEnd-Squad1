@@ -4,6 +4,8 @@ namespace LabSchoolAPI.DTOs
 {
     public class AvaliacaoUpdateDTO
     {
+        public int Id { get; set; }
+        
         [MaxLength(50, ErrorMessage = "Este campo aceita até 50 caracteres")]
         public string Titulo { get; set; }
 
