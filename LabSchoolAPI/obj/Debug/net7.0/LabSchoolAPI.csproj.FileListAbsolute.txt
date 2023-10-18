@@ -156,85 +156,6 @@ C:/Users/rogem/OneDrive/Área de Trabalho/LabSchoolAPI/M3P-BackEnd-Squad1/LabSch
 C:/Users/rogem/OneDrive/Área de Trabalho/LabSchoolAPI/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.pdb
 C:/Users/rogem/OneDrive/Área de Trabalho/LabSchoolAPI/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.genruntimeconfig.cache
 C:/Users/rogem/OneDrive/Área de Trabalho/LabSchoolAPI/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/ref/LabSchoolAPI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/appsettings.Development.json
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/appsettings.json
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.deps.json
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.runtimeconfig.json
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.pdb
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/AutoMapper.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Azure.Core.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Azure.Identity.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Humanizer.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Identity.Client.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.OpenApi.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Mono.TextTemplating.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.CodeDom.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Drawing.Common.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Memory.Data.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Runtime.Caching.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Security.Permissions.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Windows.Extensions.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.csproj.AssemblyReference.cache
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.GeneratedMSBuildEditorConfig.editorconfig
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.AssemblyInfoInputs.cache
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.AssemblyInfo.cs
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.csproj.CoreCompileInputs.cache
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.MvcApplicationPartsAssemblyInfo.cs
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.MvcApplicationPartsAssemblyInfo.cache
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.LabSchoolAPI.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.build.LabSchoolAPI.props
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.LabSchoolAPI.props
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.LabSchoolAPI.props
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets.pack.json
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets.build.json
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets.development.json
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/scopedcss/bundle/LabSchoolAPI.styles.css
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.csproj.CopyComplete
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/refint/LabSchoolAPI.dll
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.pdb
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.genruntimeconfig.cache
-/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/ref/LabSchoolAPI.dll
 C:/Users/rogerio.mattos/Desktop/Módulo3_Proj_Final/LabSchoolAPI/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/appsettings.Development.json
 C:/Users/rogerio.mattos/Desktop/Módulo3_Proj_Final/LabSchoolAPI/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/appsettings.json
 C:/Users/rogerio.mattos/Desktop/Módulo3_Proj_Final/LabSchoolAPI/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.exe
@@ -393,82 +314,82 @@ C:/Users/rogerio.mattos/Desktop/Módulo3_Proj_Final/LabSchoolAPI/M3P-BackEnd-Squ
 /home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.pdb
 /home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.genruntimeconfig.cache
 /home/feredragon/Documentos/GitHub/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/ref/LabSchoolAPI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.csproj.AssemblyReference.cache
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.AssemblyInfoInputs.cache
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.AssemblyInfo.cs
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.csproj.CoreCompileInputs.cache
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\refint\LabSchoolAPI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.pdb
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\appsettings.Development.json
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\appsettings.json
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\LabSchoolAPI.exe
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\LabSchoolAPI.deps.json
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\LabSchoolAPI.runtimeconfig.json
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\LabSchoolAPI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\LabSchoolAPI.pdb
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\AutoMapper.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Azure.Core.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Azure.Identity.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Humanizer.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.Identity.Client.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.OpenApi.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Mono.TextTemplating.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.CodeDom.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.Drawing.Common.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.Memory.Data.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.Runtime.Caching.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.Security.Permissions.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\System.Windows.Extensions.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\staticwebassets\msbuild.LabSchoolAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\staticwebassets\msbuild.build.LabSchoolAPI.props
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.LabSchoolAPI.props
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.LabSchoolAPI.props
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\staticwebassets.pack.json
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\staticwebassets.build.json
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\staticwebassets.development.json
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\scopedcss\bundle\LabSchoolAPI.styles.css
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.csproj.CopyComplete
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\LabSchoolAPI.genruntimeconfig.cache
-C:\Users\rogem\OneDrive\Área de Trabalho\LabSchoolAPI\M3P-BackEnd-Squad1\LabSchoolAPI\obj\Debug\net7.0\ref\LabSchoolAPI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.csproj.AssemblyReference.cache
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.AssemblyInfoInputs.cache
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.AssemblyInfo.cs
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.csproj.CoreCompileInputs.cache
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/appsettings.Development.json
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/appsettings.json
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.deps.json
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.runtimeconfig.json
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/LabSchoolAPI.pdb
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/AutoMapper.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Azure.Core.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Azure.Identity.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Humanizer.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Identity.Client.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.CodeDom.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Drawing.Common.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Memory.Data.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Runtime.Caching.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Security.Permissions.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/System.Windows.Extensions.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.LabSchoolAPI.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.build.LabSchoolAPI.props
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.LabSchoolAPI.props
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.LabSchoolAPI.props
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets.build.json
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/staticwebassets.development.json
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/scopedcss/bundle/LabSchoolAPI.styles.css
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.csproj.CopyComplete
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/refint/LabSchoolAPI.dll
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.pdb
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/LabSchoolAPI.genruntimeconfig.cache
+/Users/alexandrenolla/Desktop/final-backend/M3P-BackEnd-Squad1/LabSchoolAPI/obj/Debug/net7.0/ref/LabSchoolAPI.dll

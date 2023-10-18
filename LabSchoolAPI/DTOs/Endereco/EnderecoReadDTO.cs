@@ -9,7 +9,6 @@ namespace LabSchoolAPI.DTOs
     public class EnderecoReadDTO
     {
         public int Id { get; set; }
-        public int EnderecoId { get; set; }
         
         public string Cep { get; set; }
 
