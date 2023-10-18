@@ -9,6 +9,7 @@ namespace LabSchoolAPI.DTOs
 {
     public class LogReadDTO
     {
+        public int Id { get; set; }
          
         public TipoAtividade Atividade { get; set; }
 

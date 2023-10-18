@@ -28,7 +28,7 @@ namespace LabSchoolAPI.Controllers
         public async Task<ActionResult<WhiteLabelReadDTO>> CreateWhiteLabel(WhiteLabelCreateDTO whiteLabelCreateDTO)
         {
             var whiteLabel = await _whiteLabelRepository.CreateAsync(whiteLabelCreateDTO);
-            return CreatedAtAction(nameof(GetWhiteLabelById), new { id = whiteLabel.WhiteLabelId }, whiteLabel);
+            return CreatedAtAction(nameof(GetWhiteLabelById), new { id = whiteLabel.Id }, whiteLabel);
 
         }
 
