@@ -29,7 +29,7 @@ namespace LabSchoolAPI.DTOs
 
         public double Matricula { get; set; }
 
-        public int ProfessorId { get; set; }
+        public int CodigoProfessor { get; set; }
 
         public int WhiteLabelId { get; set; }
     }

@@ -29,7 +29,7 @@ namespace LabSchoolAPI.Controllers
         public async Task<ActionResult<EnderecoReadDTO>> CreateEndereco(EnderecoCreateDTO enderecoCreateDTO)
         {
             var endereco = await _enderecoRepository.CreateAsync(enderecoCreateDTO);
-            return CreatedAtAction(nameof(GetEnderecoById), new { id = endereco.EnderecoId }, endereco);
+            return CreatedAtAction(nameof(GetEnderecoById), new { id = endereco.Id }, endereco);
 
         }
 
