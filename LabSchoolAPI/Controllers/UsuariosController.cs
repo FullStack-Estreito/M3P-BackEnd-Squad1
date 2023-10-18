@@ -18,14 +18,16 @@ namespace LabSchoolAPI.Controllers
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IEnderecoRepository _enderecoRepository;
         private readonly IConfiguration _configuration;
         private readonly ILogger<UsuarioController> _logger; // Para log de erros
 
-        public UsuarioController(IUsuarioRepository usuarioRepository, IConfiguration configuration, ILogger<UsuarioController> logger)
+        public UsuarioController(IUsuarioRepository usuarioRepository, IConfiguration configuration, ILogger<UsuarioController> logger, IEnderecoRepository enderecoRepository)
         {
             _usuarioRepository = usuarioRepository;
             _configuration = configuration;
             _logger = logger;
+            _enderecoRepository = enderecoRepository;
         }
 
         // Listar todos os usuários
@@ -51,6 +53,7 @@ namespace LabSchoolAPI.Controllers
         public async Task<IActionResult> Create(UsuarioCreateDTO userDto)
         {
             var user = await _usuarioRepository.CreateAsync(userDto);
+            var endereco = await _enderecoRepository.CreateAsync(userDto);
             return CreatedAtAction(nameof(GetById), new { id = user.Matricula }, user);// estava pedindo ID aki no lugar da matricula. Adicione a propriedade "Id" em UsuarioReadDTO.
         }
 
