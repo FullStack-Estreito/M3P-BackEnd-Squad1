@@ -58,6 +58,8 @@ namespace FichaCadastroApi.AutoMapper
             // LOG
              CreateMap<LogModel, LogCreateDTO>();
              CreateMap<LogModel, LogReadDTO>();
+             CreateMap<LogCreateDTO, LogModel> ();
+             
 
 
         }

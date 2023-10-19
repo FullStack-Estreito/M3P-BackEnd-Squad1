@@ -23,7 +23,7 @@ namespace LabSchoolAPI.Models
         [Required]
         public TipoEstado Estado { get; set; } //enum
 
-        [Column(TypeName = "VARCHAR"), Required, StringLength(20)] 
+        [Column(TypeName = "VARCHAR"), Required, StringLength(200)] 
         public string Logradouro { get; set; }
 
         [Column(TypeName = "VARCHAR"), Required, StringLength(10)] 

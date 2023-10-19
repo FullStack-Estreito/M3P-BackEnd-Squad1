@@ -70,7 +70,7 @@ namespace LabSchoolAPI.Controllers
             }
 
             await _atendimentoRepository.UpdateAsync(atendimentoUpdateDTO);
-            return NoContent();
+            return Ok();
         }
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
