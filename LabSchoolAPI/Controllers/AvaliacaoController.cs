@@ -23,6 +23,8 @@ namespace LabSchoolAPI.Controllers
 
         // GET: api/Avaliacao
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<AvaliacaoReadDTO>>> GetAll()
         {
             return Ok(await _avaliacaoRepository.GetAllAsync());
@@ -30,13 +32,15 @@ namespace LabSchoolAPI.Controllers
 
         // GET: api/Avaliacao/{id}
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<AvaliacaoReadDTO>> GetById(int id)
         {
             var avaliacao = await _avaliacaoRepository.GetByIdAsync(id);
 
             if (avaliacao == null)
             {
-                return NotFound();
+                return BadRequest();
             }
 
             return Ok(avaliacao);
@@ -44,14 +48,18 @@ namespace LabSchoolAPI.Controllers
 
         // POST: api/Avaliacao
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<AvaliacaoReadDTO>> Create(AvaliacaoCreateDTO avaliacaoCreateDTO)
         {
+
             var avaliacao = await _avaliacaoRepository.CreateAsync(avaliacaoCreateDTO);
             return CreatedAtAction(nameof(GetById), new { id = avaliacao.Id }, avaliacao);
         }
 
         // PUT: api/Avaliacao/{id}
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> Update(int id, AvaliacaoUpdateDTO avaliacaoUpdateDTO)
         {
             if (id != avaliacaoUpdateDTO.Id)

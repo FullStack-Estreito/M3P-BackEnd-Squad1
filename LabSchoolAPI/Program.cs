@@ -1,14 +1,15 @@
 using LabSchoolAPI.Context;
-using LabSchoolAPI.Services.Interfaces; 
-using LabSchoolAPI.Services.Repositorys; 
+using LabSchoolAPI.Services.Interfaces;
+using LabSchoolAPI.Services.Repositorys;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
-string connectionString = "Server=127.0.0.1,1433;Database=testApiPortal;User Id=sa;Password=P@ssw0rd123!;TrustServerCertificate=True;";
+string connectionString = "Data Source=ROGERIO-MATTOS\\SQLEXPRESS;User ID=sa;Password=1234;Database=LabSchoolDb;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
 builder.Services.AddDbContext<LabSchoolContext>(options => options.UseSqlServer(connectionString));
 
 //  autenticação JWT
@@ -34,7 +35,7 @@ builder.Services.AddScoped<IEnderecoRepository, EnderecoRepository>();
 builder.Services.AddScoped<IAtendimentoRepository, AtendimentoRepository>();
 builder.Services.AddScoped<IAvaliacaoRepository, AvaliacaoRepository>();
 builder.Services.AddScoped<IExercicioRepository, ExercicioRepository>();
- 
+builder.Services.AddScoped<ILogRepository, LogRepository>();
 
 
 // Add services to the container.
@@ -62,5 +63,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
 
 
