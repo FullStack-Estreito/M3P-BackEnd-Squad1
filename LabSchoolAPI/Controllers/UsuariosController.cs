@@ -105,7 +105,7 @@ namespace LabSchoolAPI.Controllers
                 return Ok(new
                 {
                     Token = tokenString,
-                    Matricula = user.Matricula,
+                    Id = user.Id,
                     Nome = user.Nome,
                     Email = user.Email
                 });
