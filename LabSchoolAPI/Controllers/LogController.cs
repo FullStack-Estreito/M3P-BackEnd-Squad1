@@ -29,27 +29,46 @@ namespace LabSchoolAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<LogReadDTO>>> GetAllLogs()
         {
-            return Ok(await _logRepository.GetAllAsync());
-        }
+           var log = await _logRepository.GetAllAsync();
 
+            if (log != null && log.Any())
+            {
+                var successMessage = "Logs encontrados com sucesso";
+                return Ok(new { message = successMessage, log });
+            }
+            else
+            {
+                var errorMessage = "Nenhum log encontrado";
+                return NotFound(new { error = errorMessage });
+            }
+        }
         [HttpGet("{id}")]
         public async Task<ActionResult<LogReadDTO>> GetLogById(int id)
         {
             var log = await _logRepository.GetByIdAsync(id);
             if (log == null)
             {
-                return NotFound();
+                var errorMessage = "Nenhum log encontrado";
+                return NotFound(new { error = errorMessage });
             }
-            return Ok(log);
+
+            var successMessage = "Log encontrado com sucesso";
+            return Ok(new { message = successMessage, log });
         }
 
-         [HttpPost]
+        [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<LogReadDTO>> CreateLog(LogCreateDTO logCreateDTO)
         {
             var log = await _logRepository.CreateAsync(logCreateDTO);
-            return CreatedAtAction(nameof(GetLogById), new { id = log.Id }, log);
+            if (log == null)
+            {     
+                return BadRequest();
+            }
+
+            var successMessage = "Atendimento cadastrado com sucesso";
+            return CreatedAtAction(nameof(GetLogById), new { id = log.Id }, new { message = successMessage, log });
 
         }
     }
