@@ -24,26 +24,39 @@ namespace LabSchoolAPI.Controllers
         // GET: api/Avaliacao
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<AvaliacaoReadDTO>>> GetAll()
         {
-            return Ok(await _avaliacaoRepository.GetAllAsync());
+             var avaliacao = await _avaliacaoRepository.GetAllAsync();
+
+            if (avaliacao != null && avaliacao.Any())
+            {
+                var successMessage = "Avaliações encontradas com sucesso";
+                return Ok(new { message = successMessage, avaliacao });
+            }
+            else
+            {
+                var errorMessage = "Nenhuma avaliação encontrada";
+                return NotFound(new { error = errorMessage });
+            }
         }
 
         // GET: api/Avaliacao/{id}
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<AvaliacaoReadDTO>> GetById(int id)
         {
             var avaliacao = await _avaliacaoRepository.GetByIdAsync(id);
 
             if (avaliacao == null)
             {
-                return BadRequest();
+                var errorMessage = "Nenhuma avaliação encontrada";
+                return NotFound(new { error = errorMessage });
             }
 
-            return Ok(avaliacao);
+            var successMessage = "Avaliações encontradas com sucesso";
+            return Ok(new { message = successMessage, avaliacao });
         }
 
         // POST: api/Avaliacao
@@ -52,29 +65,39 @@ namespace LabSchoolAPI.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<AvaliacaoReadDTO>> Create(AvaliacaoCreateDTO avaliacaoCreateDTO)
         {
-
             var avaliacao = await _avaliacaoRepository.CreateAsync(avaliacaoCreateDTO);
-            return CreatedAtAction(nameof(GetById), new { id = avaliacao.Id }, avaliacao);
+
+            if (avaliacao == null)
+            {
+                var errorMessage = "Os dados do atendimento não são válidos";
+                return BadRequest(new { error = errorMessage });
+            }
+
+            var successMessage = "Atendimento cadastrado com sucesso";
+            return CreatedAtAction(nameof(GetById), new { id = avaliacao.Id }, new { message = successMessage, avaliacao });
         }
 
         // PUT: api/Avaliacao/{id}
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> Update(int id, AvaliacaoUpdateDTO avaliacaoUpdateDTO)
+        public async Task<IActionResult> Update(string id, AvaliacaoUpdateDTO avaliacaoUpdateDTO)
         {
-            if (id != avaliacaoUpdateDTO.Id)
+            if (!int.TryParse(id, out int avaliacaoId) || avaliacaoId <= 0 || avaliacaoId == null)
             {
-                return BadRequest();
+                var errorMessage = "ID de avaliaçao inválido";
+                return BadRequest(new { error = errorMessage });
             }
 
-            if (!await _avaliacaoRepository.ExistsAsync(id))
+            if (!await _avaliacaoRepository.ExistsAsync(avaliacaoId))
             {
-                return NotFound();
+                var errorMessage = "Avaliaçao não encontrada";
+                return NotFound(new { error = errorMessage });
             }
 
             await _avaliacaoRepository.UpdateAsync(avaliacaoUpdateDTO);
 
-            return NoContent();
+            var successMessage = "Avaliaçao Atualizada com sucesso";
+            return Ok(new { message = successMessage });
         }
 
         // DELETE: api/Avaliacao/{id}
@@ -83,11 +106,11 @@ namespace LabSchoolAPI.Controllers
         {
             if (!await _avaliacaoRepository.ExistsAsync(id))
             {
-                return NotFound();
+
+                var errorMessage = "Avaliação não encontrada";
+                return NotFound(new { error = errorMessage });
             }
-
             await _avaliacaoRepository.DeleteAsync(id);
-
             return NoContent();
         }
     }
