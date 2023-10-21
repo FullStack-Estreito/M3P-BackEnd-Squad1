@@ -19,40 +19,78 @@ namespace LabSchoolAPI.Controllers
 
         // GET: api/Exercicio
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<ExercicioReadDTO>>> GetAll()
         {
-            return Ok(await _exercicioRepository.GetAllAsync());
+            var exercicio = await _exercicioRepository.GetAllAsync();
+
+            if (exercicio != null && exercicio.Any())
+            {
+                var successMessage = "Exercícios encontrados com sucesso";
+                return Ok(new { message = successMessage, exercicio });
+            }
+            else
+            {
+                var errorMessage = "Nenhum exercício encontrado";
+                return NotFound(new { error = errorMessage });
+            }
         }
 
         // GET: api/Exercicio/{id}
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ExercicioReadDTO>> GetById(int id)
         {
             var exercicio = await _exercicioRepository.GetByIdAsync(id);
             
             if (exercicio == null)
-                return NotFound();
+            {
+                var errorMessage = "Nenhum exercício encontrado";
+                return NotFound(new { error = errorMessage });
+            }
 
-            return Ok(exercicio);
+            var successMessage = "Exercício encontrado com sucesso";
+            return Ok(new { message = successMessage, exercicio });
         }
 
         // POST: api/Exercicio
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ExercicioReadDTO>> Create(ExercicioCreateDTO exercicioCreateDTO)
         {
-            var result = await _exercicioRepository.CreateAsync(exercicioCreateDTO);
-            return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
-        }
+            var exercicio = await _exercicioRepository.CreateAsync(exercicioCreateDTO);
+            if (exercicio == null)
+            {
+                return BadRequest();
+            }
 
+            var successMessage = "Exercício cadastrado com sucesso";
+            return CreatedAtAction(nameof(GetById), new { id = exercicio.Id }, new { message = successMessage, exercicio });
+        }
+        
         // PUT: api/Exercicio/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, ExercicioUpdateDTO exercicioUpdateDTO)
+        public async Task<IActionResult> Update(string id, ExercicioUpdateDTO exercicioUpdateDTO)
         {
-            if (!await _exercicioRepository.ExistsAsync(id))
-                return NotFound();
+           if (!int.TryParse(id, out int exercicioId) || exercicioId <= 0 || exercicioId == null)
+            {
+                
+                return BadRequest();
+            }
+
+            if (!await _exercicioRepository.ExistsAsync(exercicioId))
+            {
+                var errorMessage = "Exercício não encontrado";
+                return NotFound(new { error = errorMessage });
+            }
 
             await _exercicioRepository.UpdateAsync(exercicioUpdateDTO);
-            return NoContent();
+
+            var successMessage = "Exercício Atualizado com sucesso";
+            return Ok(new { message = successMessage });
         }
 
         // DELETE: api/Exercicio/{id}
@@ -60,8 +98,11 @@ namespace LabSchoolAPI.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             if (!await _exercicioRepository.ExistsAsync(id))
-                return NotFound();
+            {
 
+                var errorMessage = "Exercicio não encontrado";
+                return NotFound(new { error = errorMessage });
+            }
             await _exercicioRepository.DeleteAsync(id);
             return NoContent();
         }
