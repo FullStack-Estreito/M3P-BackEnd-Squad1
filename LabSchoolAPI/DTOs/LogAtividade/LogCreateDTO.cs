@@ -11,9 +11,10 @@ namespace LabSchoolAPI.DTOs
 {
     public class LogCreateDTO
     {
+        [Required(ErrorMessage ="Campo obrigatório, este campo não pode ficar vazio")]
         public int UsuarioId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Campo obrigatório, este campo não pode ficar vazio")]
         public TipoAtividade Atividade { get; set; }
 
         public string Descricao { get; set; }
