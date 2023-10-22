@@ -30,56 +30,102 @@ namespace LabSchoolAPI.Controllers
 
         // Listar todos os usuários
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetAll()
         {
-            var users = await _usuarioRepository.GetAllAsync();
-            return Ok(users);
+            var usuarios = await _usuarioRepository.GetAllAsync();
+            if (usuarios != null && usuarios.Any())
+            {
+                var successMessage = "Usuários encontrados com sucesso";
+                return Ok(new { message = successMessage, usuarios });
+            }
+            else
+            {
+                var errorMessage = "Nenhum usuário encontrado";
+                return NotFound(new { error = errorMessage });
+            }
         }
 
         // Obter um usuário pelo ID
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetById(int id)
         {
-            var user = await _usuarioRepository.GetByIdAsync(id);
-            if (user == null)
-                return NotFound();
-            return Ok(user);
+            var usuario = await _usuarioRepository.GetByIdAsync(id);
+            if (usuario == null)
+            {
+                var errorMessage = "Nenhum usuário encontrado";
+                return NotFound(new { error = errorMessage });
+            }
+
+            var successMessage = "Usuário encontrado com sucesso";
+            return Ok(new { message = successMessage, usuario });
         }
 
         
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Create(UsuarioCreateDTO userDto)
         {
-            var user = await _usuarioRepository.CreateAsync(userDto);
-            return CreatedAtAction(nameof(GetById), new { id = user.Id }, user);// estava pedindo ID aki no lugar da matricula. Adicione a propriedade "Id" em UsuarioReadDTO.
+            var usuario = await _usuarioRepository.CreateAsync(userDto);
+            if (usuario == null)
+            {
+                
+                return BadRequest("Dados inválidos");
+            }
+
+            var successMessage = "Usuario cadastrado com sucesso";
+            return CreatedAtAction(nameof(GetById), new { id = usuario.Id }, new { message = successMessage, usuario });
         }
 
 
         // Atualizar um usuário
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, UsuarioUpdateDTO userDto)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> Update(string id, UsuarioUpdateDTO usuarioDto)
         {
-            if (await _usuarioRepository.ExistsAsync(id))
+            if (!int.TryParse(id, out int usuarioId) || usuarioId <= 0 || usuarioId == null)
             {
-                await _usuarioRepository.UpdateAsync(userDto);
-                return NoContent();
+                
+                return BadRequest("ID de atendimento inválido");
             }
-            return NotFound();
+
+            if (!await _usuarioRepository.ExistsAsync(usuarioId))
+            {
+                var errorMessage = "Usuario não encontrado";
+                return NotFound(new { error = errorMessage });
+            }
+
+            await _usuarioRepository.UpdateAsync(usuarioDto);
+
+            var successMessage = "Usuario Atualizado com sucesso";
+            return Ok(new { message = successMessage });
         }
 
         // Deletar um usuário
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(int id)
         {
-            if (await _usuarioRepository.ExistsAsync(id))
+            if (!await _usuarioRepository.ExistsAsync(id))
             {
-                await _usuarioRepository.DeleteAsync(id);
-                return NoContent();
+
+                var errorMessage = "Usuario não encontrado";
+                return NotFound(new { error = errorMessage });
             }
-            return NotFound();
+            await _usuarioRepository.DeleteAsync(id);
+            return NoContent();
         }
 
         [HttpPost("login")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Login(UsuarioLoginDTO loginDto)
         {
             try
@@ -118,6 +164,8 @@ namespace LabSchoolAPI.Controllers
         }
 
         [HttpPut("changepassword")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> ChangePassword(UsuarioResetarSenhaDTO resetDTO)
         {
             bool result = await _usuarioRepository.ResetPasswordAsync(resetDTO);
