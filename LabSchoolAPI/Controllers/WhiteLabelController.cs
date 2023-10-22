@@ -25,50 +25,90 @@ namespace LabSchoolAPI.Controllers
         }
 
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<WhiteLabelReadDTO>> CreateWhiteLabel(WhiteLabelCreateDTO whiteLabelCreateDTO)
         {
             var whiteLabel = await _whiteLabelRepository.CreateAsync(whiteLabelCreateDTO);
-            return CreatedAtAction(nameof(GetWhiteLabelById), new { id = whiteLabel.Id }, whiteLabel);
+           if (whiteLabel == null)
+            {     
+                return BadRequest();
+            }
+
+            var successMessage = "WhiteLabel cadastrado com sucesso";
+            return CreatedAtAction(nameof(GetWhiteLabelById), new { id = whiteLabel.Id }, new { message = successMessage, whiteLabel });
 
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<WhiteLabelReadDTO>>> GetAllWhiteLabels()
         {
-            return Ok(await _whiteLabelRepository.GetAllAsync());
+            var whiteLabel = await _whiteLabelRepository.GetAllAsync();
+
+            if (whiteLabel != null && whiteLabel.Any())
+            {
+                var successMessage = "WhiteLabels encontrados com sucesso";
+                return Ok(new { message = successMessage, whiteLabel });
+            }
+            else
+            {
+                var errorMessage = "Nenhum WhiteLabel encontrado";
+                return NotFound(new { error = errorMessage });
+            }
         }
 
         [HttpGet("{id}")]
+         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<WhiteLabelReadDTO>> GetWhiteLabelById(int id)
         {
             var whiteLabel = await _whiteLabelRepository.GetByIdAsync(id);
             if (whiteLabel == null)
             {
-                return NotFound();
+                var errorMessage = "Nenhum WhiteLabel encontrado";
+                return NotFound(new { error = errorMessage });
             }
-            return Ok(whiteLabel);
+
+            var successMessage = "WhiteLabel encontrado com sucesso";
+            return Ok(new { message = successMessage, whiteLabel });
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateWhiteLabel(int id, WhiteLabelUpdateDTO whiteLabelUpdateDTO)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<IActionResult> UpdateWhiteLabel(string id, WhiteLabelUpdateDTO whiteLabelUpdateDTO)
         {
-            if (!await _whiteLabelRepository.ExistsAsync(id))
+             if (!int.TryParse(id, out int whiteLabelId) || whiteLabelId <= 0 || whiteLabelId == null)
+            { 
+                return BadRequest();
+            }
+
+            if (!await _whiteLabelRepository.ExistsAsync(whiteLabelId))
             {
-                return NotFound();
+                var errorMessage = "WhiteLabel não encontrado";
+                return NotFound(new { error = errorMessage });
             }
 
             await _whiteLabelRepository.UpdateAsync(whiteLabelUpdateDTO);
-            return NoContent();
+
+            var successMessage = "WhiteLabel Atualizado com sucesso";
+            return Ok(new { message = successMessage });;
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteWhiteLabel(int id)
         {
-            if (!await _whiteLabelRepository.ExistsAsync(id))
+             if (!await _whiteLabelRepository.ExistsAsync(id))
             {
-                return NotFound();
-            }
 
+                var errorMessage = "whiteLabel não encontrado";
+                return NotFound(new { error = errorMessage });
+            }
             await _whiteLabelRepository.DeleteAsync(id);
             return NoContent();
         }
