@@ -9,30 +9,46 @@ namespace LabSchoolAPI.DTOs
 {
     public class UsuarioUpdateDTO
     {
+        public int Id{ get; set; }
 
-        [MaxLength(150, ErrorMessage = "Este campo aceita até 150 caracteres")]
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MinLength(8, ErrorMessage = "Campo obrigatório, este campo aceita no mínimo de 8 caracteres")]
+        [MaxLength(64, ErrorMessage = "Campo obrigatório, este campo aceita no máximo 64 caracteres")]
         public string Nome { get; set; }
 
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
         public TipoGenero Genero { get; set; }
 
-        [MaxLength(11, ErrorMessage = "Digite o cpf sem pontuação: XXXXXXXXXXX")]
-        [MinLength(11, ErrorMessage = "Digite o cpf sem pontuação: XXXXXXXXXXX")]
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(11, ErrorMessage = "Campo Obrigatório, digite o cpf sem pontuação: XXXXXXXXXXX")]
+        [MinLength(11, ErrorMessage = "Campo Obrigatório, digite o cpf sem pontuação: XXXXXXXXXXX")]
         public string Cpf { get; set; }
 
-        [MaxLength(15, ErrorMessage = "Digite o telefone nesse formato: (XX) XXXXX-XXXX")]
-        [MinLength(15, ErrorMessage = "Digite o telefone nesse formato: (XX) XXXXX-XXXX")]
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(15, ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio, digite o telefone nesse formato: (XX) XXXXX-XXXX")]
+        [MinLength(15, ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio, digite o telefone nesse formato: (XX) XXXXX-XXXX")]
         public string Telefone { get; set; }
 
-        [EmailAddress]
-        [MaxLength(100, ErrorMessage = "Este campo aceita até 100 caracteres")]
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(100, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo caracteres")]
+        [EmailAddress(ErrorMessage = "Campo Obrigatório, endereço de e-mail inválido, digite o email no formato xxxxx@xxxx.xxxx")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MinLength(6, ErrorMessage = "Campo obrigatório, este campo aceita no mínimo de 6 caracteres")]
+        public string Senha { get; set; }
+
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
         public TipoUsuario TipoUsuario { get; set; }
 
         public int Matricula { get; set; }
 
         public int CodigoProfessor { get; set; }
 
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
         public int WhiteLabelId { get; set; }
+
+        [Required]
+        public EnderecoCreateDTO Endereco { get; set; }
     }
 }
