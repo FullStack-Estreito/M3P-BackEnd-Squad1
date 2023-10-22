@@ -11,34 +11,35 @@ namespace LabSchoolAPI.DTOs
     public class EnderecoCreateDTO
     {
         
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [MaxLength(9, ErrorMessage = "Digite o cep nesse formato: XXXXX-XXX")]
-        [MinLength(9, ErrorMessage = "Digite o cep nesse formato: XXXXX-XXX")] // CEP no formato XXXXX-XXX
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(9, ErrorMessage = "Campo Obrigatório, digite o cep nesse formato: XXXXX-XXX")]
+        [MinLength(9, ErrorMessage = "Campo Obrigatório, digite o cep nesse formato: XXXXX-XXX")] // CEP no formato XXXXX-XXX
         public string Cep { get; set; }
 
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [MaxLength(100, ErrorMessage = "Este campo aceita até 100 caracteres")]
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(100, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo 100 caracteres")]
         public string Cidade { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(100, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo 100 caracteres")]
         public TipoEstado Estado { get; set; } //enum
 
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [MaxLength(20, ErrorMessage = "Este campo aceita até 20 caracteres")]
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(20, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo 20 caracteres")]
         public string Logradouro { get; set; }
 
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [MaxLength(10, ErrorMessage = "Este campo aceita até 10 caracteres")] 
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(10, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo 10 caracteres")] 
         public string Numero { get; set; }
 
-        [MaxLength(100, ErrorMessage = "Este campo aceita até 100 caracteres")] // Campo opcional
+        [MaxLength(100, ErrorMessage = "Este campo aceita no máximo 100 caracteres")] // Campo opcional
         public string Complemento { get; set; }
 
-        [Required(ErrorMessage = "Campo Obrigatório")]
-        [MaxLength(120, ErrorMessage = "Este campo aceita até 120 caracteres")] 
+        [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
+        [MaxLength(120, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo 120 caracteres")] 
         public string Bairro { get; set; }
 
-        [MaxLength(120, ErrorMessage = "Este campo aceita até 120 caracteres")]  // Campo opcional
+        [MaxLength(120, ErrorMessage = "Este campo aceita no máximo 120 caracteres")]  // Campo opcional
         public string Referencia { get; set; }
     }
     
