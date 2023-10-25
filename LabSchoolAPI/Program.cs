@@ -46,6 +46,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
+builder.Services.AddCors();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -59,6 +61,14 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();  // adicionar essa linha
 app.UseAuthorization();
+
+app.UseCors(cors =>
+{
+    cors.AllowAnyHeader();
+    cors.AllowAnyMethod();
+    cors.AllowAnyOrigin();
+});
+
 
 app.MapControllers();
 

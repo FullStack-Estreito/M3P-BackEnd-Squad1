@@ -18,23 +18,10 @@ namespace LabSchoolAPI.Controllers
         }
 
         // GET: api/Exercicio
-        [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+         [HttpGet]
         public async Task<ActionResult<IEnumerable<ExercicioReadDTO>>> GetAll()
         {
-            var exercicio = await _exercicioRepository.GetAllAsync();
-
-            if (exercicio != null && exercicio.Any())
-            {
-                var successMessage = "Exercícios encontrados com sucesso";
-                return Ok(new { message = successMessage, exercicio });
-            }
-            else
-            {
-                var errorMessage = "Nenhum exercício encontrado";
-                return NotFound(new { error = errorMessage });
-            }
+            return Ok(await _exercicioRepository.GetAllAsync());
         }
 
         // GET: api/Exercicio/{id}

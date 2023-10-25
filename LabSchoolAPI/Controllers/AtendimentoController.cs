@@ -34,18 +34,7 @@ namespace LabSchoolAPI.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<AtendimentoReadDTO>>> GetAllAtendimentos()
         {
-            var atendimentos = await _atendimentoRepository.GetAllAsync();
-
-            if (atendimentos != null && atendimentos.Any())
-            {
-                var successMessage = "Atendimentos encontrados com sucesso";
-                return Ok(new { message = successMessage, atendimentos });
-            }
-            else
-            {
-                var errorMessage = "Nenhum atendimento encontrado";
-                return NotFound(new { error = errorMessage });
-            }    
+            return Ok(await _atendimentoRepository.GetAllAsync());
         }
 
         [HttpGet("{id}")]
