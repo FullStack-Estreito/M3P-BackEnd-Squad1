@@ -41,24 +41,11 @@ namespace LabSchoolAPI.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<WhiteLabelReadDTO>>> GetAllWhiteLabels()
         {
-            var whiteLabel = await _whiteLabelRepository.GetAllAsync();
-
-            if (whiteLabel != null && whiteLabel.Any())
-            {
-                var successMessage = "WhiteLabels encontrados com sucesso";
-                return Ok(new { message = successMessage, whiteLabel });
-            }
-            else
-            {
-                var errorMessage = "Nenhum WhiteLabel encontrado";
-                return NotFound(new { error = errorMessage });
-            }
+            return Ok(await _whiteLabelRepository.GetAllAsync());
         }
-
+        
         [HttpGet("{id}")]
          [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

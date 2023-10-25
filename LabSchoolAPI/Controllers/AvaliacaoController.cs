@@ -24,21 +24,10 @@ namespace LabSchoolAPI.Controllers
         // GET: api/Avaliacao
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<AvaliacaoReadDTO>>> GetAll()
         {
-             var avaliacao = await _avaliacaoRepository.GetAllAsync();
-
-            if (avaliacao != null && avaliacao.Any())
-            {
-                var successMessage = "Avaliações encontradas com sucesso";
-                return Ok(new { message = successMessage, avaliacao });
-            }
-            else
-            {
-                var errorMessage = "Nenhuma avaliação encontrada";
-                return NotFound(new { error = errorMessage });
-            }
+            return Ok(await _avaliacaoRepository.GetAllAsync());
         }
 
         // GET: api/Avaliacao/{id}

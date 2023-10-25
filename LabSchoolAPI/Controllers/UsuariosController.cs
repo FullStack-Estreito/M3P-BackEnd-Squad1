@@ -30,21 +30,10 @@ namespace LabSchoolAPI.Controllers
 
         // Listar todos os usuários
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetAll()
         {
-            var usuarios = await _usuarioRepository.GetAllAsync();
-            if (usuarios != null && usuarios.Any())
-            {
-                var successMessage = "Usuários encontrados com sucesso";
-                return Ok(new { message = successMessage, usuarios });
-            }
-            else
-            {
-                var errorMessage = "Nenhum usuário encontrado";
-                return NotFound(new { error = errorMessage });
-            }
+            var users = await _usuarioRepository.GetAllAsync();
+            return Ok(users);
         }
 
         // Obter um usuário pelo ID

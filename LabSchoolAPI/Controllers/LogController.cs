@@ -29,19 +29,9 @@ namespace LabSchoolAPI.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IEnumerable<LogReadDTO>>> GetAllLogs()
         {
-           var log = await _logRepository.GetAllAsync();
-
-            if (log != null && log.Any())
-            {
-                var successMessage = "Logs encontrados com sucesso";
-                return Ok(new { message = successMessage, log });
-            }
-            else
-            {
-                var errorMessage = "Nenhum log encontrado";
-                return NotFound(new { error = errorMessage });
-            }
+            return Ok(await _logRepository.GetAllAsync());
         }
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<LogReadDTO>> GetLogById(int id)
         {
