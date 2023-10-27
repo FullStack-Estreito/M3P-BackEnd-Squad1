@@ -25,7 +25,7 @@ namespace LabSchoolAPI.DTOs
         public TipoEstado Estado { get; set; } //enum
 
         [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
-        [MaxLength(20, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo 20 caracteres")]
+        [MaxLength(200, ErrorMessage = "Campo Obrigatório, este campo aceita no máximo 200 caracteres")]
         public string Logradouro { get; set; }
 
         [Required(ErrorMessage = "Campo Obrigatório, este campo não pode ficar vazio")]
