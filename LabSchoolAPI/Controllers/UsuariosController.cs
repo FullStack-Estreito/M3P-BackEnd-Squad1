@@ -142,7 +142,8 @@ namespace LabSchoolAPI.Controllers
                     Token = tokenString,
                     Id = user.Id,
                     Nome = user.Nome,
-                    Email = user.Email
+                    Email = user.Email,
+                    TipoUsuario = user.TipoUsuario
                 });
             }
             catch (Exception ex)
