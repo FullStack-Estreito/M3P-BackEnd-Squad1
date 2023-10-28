@@ -17,5 +17,7 @@ namespace LabSchoolAPI.DTOs
 
         public int CodigoProfessor { get; set; }
 
+        public int AlunoId { get; set; }
+
     }
 }
