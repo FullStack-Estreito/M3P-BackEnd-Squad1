@@ -26,7 +26,7 @@ Frontend da LABSchool-Manager, uma aplicação Angular integrada com a API RESTf
 1. Clone o repositório: `git clone https://github.com/FullStack-Estreito/M3P-FrontEnd-Squad1.git`
 2. Navegue até o diretório do projeto: `cd LABSchool-Manager`
 3. Instale as dependências: `npm install`
-5. Inicie o servidor de desenvolvimento: `ng serve`
+5. Inicie e abra o servidor de desenvolvimento: `ng serve --o`
 6. Acesse a aplicação em `http://localhost:4200`
 
 ## Uso
