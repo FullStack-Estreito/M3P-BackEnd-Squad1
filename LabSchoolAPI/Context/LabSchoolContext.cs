@@ -76,11 +76,11 @@ namespace LabSchoolAPI.Context
                 new WhiteLabelModel { Id = 3, NomeEmpresa = "Lab365", Slogan = "LAB365 - Espaço do SENAI para desenvolver habilidades do futuro.", Cores = "#808080, #C8A2C8, #FFA500", UrlLogo = "https://play-lh.googleusercontent.com/XVWVhVq5s0_ME8DAGCEVEAM-vRiU0RvWH6DhYIfJHdYi2lwx-8L0YIK-YT0uEH-PFg=w240-h480", Complemento = "Senai LAB 365" }
             );
 
-            modelBuilder.Entity<UsuarioModel>().HasData(
-                new UsuarioModel { Id = 1, Nome = "Fernando", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 0, Matricula = 0, CodigoProfessor = 0, StatusAtivo = true },
-                new UsuarioModel { Id = 2, Nome = "Pedagogo", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 1, Matricula = 0, CodigoProfessor = 0, StatusAtivo = true },
-                new UsuarioModel { Id = 3, Nome = "Professor", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 2, Matricula = 0, CodigoProfessor = 1, StatusAtivo = true },
-                new UsuarioModel { Id = 4, Nome = "Aluno", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 3, Matricula = 123, CodigoProfessor = 0, StatusAtivo = true }
+            modelBuilder.Entity<UsuarioCreateDTO>().HasData(
+                new UsuarioCreateDTO { Id = 1, Nome = "Fernando", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 0, Matricula = 0, CodigoProfessor = 0, StatusAtivo = true },
+                new UsuarioCreateDTO  { Id = 2, Nome = "Pedagogo", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 1, Matricula = 0, CodigoProfessor = 0, StatusAtivo = true },
+                new UsuarioCreateDTO  { Id = 3, Nome = "Professor", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 2, Matricula = 0, CodigoProfessor = 1, StatusAtivo = true },
+                new UsuarioCreateDTO  { Id = 4, Nome = "Aluno", Cpf = "05193149995", Telefone = "(48) 98805-0165", Email = "alexandre.nolla@gmail.com", Genero = 0, Senha = "root", TipoUsuario = 3, Matricula = 123, CodigoProfessor = 0, StatusAtivo = true }
             );
         }
 
