@@ -27,7 +27,7 @@ Frontend da LABSchool-Manager, uma aplicação Angular integrada com a API RESTf
 2. Navegue até o diretório do projeto: `cd LABSchool-Manager`
 3. Instale as dependências: `npm install`
 5. Inicie e abra o servidor de desenvolvimento: `ng serve --o`
-6. Acesse a aplicação em `http://localhost:4200`
+6. Acesse a aplicação em `http://localhost:4200/swagger`
 
 ## Uso
 
