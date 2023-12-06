@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\LabSchoolAPI\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj": {}
+    "D:\\Projects\\Lab365\\Alunos\\FernandoAlexandre\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\LabSchoolAPI\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj": {
+    "D:\\Projects\\Lab365\\Alunos\\FernandoAlexandre\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\LabSchoolAPI\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
+        "projectUniqueName": "D:\\Projects\\Lab365\\Alunos\\FernandoAlexandre\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
         "projectName": "LabSchoolAPI",
-        "projectPath": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\LabSchoolAPI\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
-        "packagesPath": "C:\\Users\\rogem\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rogem\\OneDrive\\Área de Trabalho\\LabSchoolAPI\\M3P-BackEnd-Squad1\\LabSchoolAPI\\obj\\",
+        "projectPath": "D:\\Projects\\Lab365\\Alunos\\FernandoAlexandre\\M3P-BackEnd-Squad1\\LabSchoolAPI\\LabSchoolAPI.csproj",
+        "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Lab365\\Alunos\\FernandoAlexandre\\M3P-BackEnd-Squad1\\LabSchoolAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rogem\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -112,7 +108,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
