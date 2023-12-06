@@ -9,7 +9,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string connectionString = "Data Source=ROGERIO-MATTOS\\SQLEXPRESS;User ID=sa;Password=1234;Database=LabSchoolDb;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+string connectionString = "Data Source=tcp:labcluster01.database.windows.net,1433;Initial Catalog=LabSchoolDb;Persist Security Info=False;User ID=dbUser;Password=P@ssword@050604;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
 builder.Services.AddDbContext<LabSchoolContext>(options => options.UseSqlServer(connectionString));
 
 //  autenticação JWT
